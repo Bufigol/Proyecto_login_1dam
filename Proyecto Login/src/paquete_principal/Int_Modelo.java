@@ -16,10 +16,12 @@ public interface Int_Modelo {
 
 	public void setVis_Bienvenida(Vis_Bienvenida bienvenida);
 
+	public void registrar_usuario_tabla();
+
 	public boolean comprobar_Pasword_login();
 
 	public boolean comprobar_password_registro();
 
-	public void registrar_usuario_tabla();
+	public boolean comprobar_correo_registro();
 
 }
