@@ -290,28 +290,32 @@ public class Vis_Registro extends JFrame implements Int_Registro {
 	 * @return the txF_Nombre
 	 */
 	public String getTxF_Nombre() {
-		return TxF_Nombre.toString();
+		String nombre = this.TxF_Nombre.getText().toString();
+		return nombre;
 	}
 
 	/**
 	 * @return the txF_Usuario
 	 */
 	public String getTxF_Usuario() {
-		return TxF_Usuario.toString();
+		String usuario = this.TxF_Usuario.getText().toString();
+		return usuario;
 	}
 
 	/**
 	 * @return the txF_Correo
 	 */
 	public String getTxF_Correo() {
-		return TxF_Correo.toString();
+		String correo = this.TxF_Correo.getText().toString();
+		return correo;
 	}
 
 	/**
 	 * @return the txF_Pass
 	 */
 	public String getTxF_Pass() {
-		return TxF_Pass.getText().toString();
+		String password = TxF_Pass.getText().toString();
+		return password;
 	}
 
 	/**

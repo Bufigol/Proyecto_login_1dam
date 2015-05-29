@@ -80,8 +80,7 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 	public boolean registrar_nuevo_usuario() {
 		// TODO Auto-generated method stub
 		set_Datos_en_modelo();
-		if (this.modelo.comprobar_password_registro()
-				&& this.modelo.comprobar_correo_registro()) {
+		if (this.modelo.comprobar_password_registro()) {
 			this.modelo.registrar_usuario_tabla();
 			return true;
 		} else {
@@ -92,12 +91,14 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 	@Override
 	public void set_Datos_en_modelo() {
 		// TODO Auto-generated method stub
-		this.modelo.setPassword_registro(this.Registro.getTxF_Pass());
 		this.modelo
-				.setRepetir_password_registro(this.Registro.getTxF_RepPass());
-		this.modelo.setMail_registro(this.Registro.getTxF_Correo());
-		this.modelo.setNombre_registro(this.Registro.getName());
-		this.modelo.setUsuario(this.Registro.getTxF_Usuario());
+				.setPassword_registro(this.Registro.getTxF_Pass().toString());
+		this.modelo.setRepetir_password_registro(this.Registro.getTxF_RepPass()
+				.toString());
+		this.modelo.setMail_registro(this.Registro.getTxF_Correo().toString());
+		this.modelo
+				.setNombre_registro(this.Registro.getTxF_Nombre().toString());
+		this.modelo.setUsuario(this.Registro.getTxF_Usuario().toString());
 	}
 
 }

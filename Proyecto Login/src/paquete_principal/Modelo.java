@@ -13,7 +13,6 @@ public class Modelo implements Int_Modelo {
 	private String password_login;
 	private String mail_registro;
 
-
 	// Conexion con la base de datos
 	private String url_conexion_BD;
 	private Connection conexion_BD;
@@ -231,15 +230,22 @@ public class Modelo implements Int_Modelo {
 
 	@Override
 	public void registrar_usuario_tabla() {
-		// TODO Auto-generated method stub
+		String procedimiento = "{call PROYECTO_LOGIN.INSERTADO_DATOS_REGISTRO (?,?,?,?)}";
 		try {
-			Statement stmt = conexion_BD.createStatement();
-			String sentenciaINSERT = "";
-			ResultSet rset = stmt.executeQuery(sentenciaINSERT);
-			rset.close();
-			stmt.close();
-		} catch (SQLException s) {
-			s.printStackTrace();
+			CallableStatement insertado = conexion_BD
+					.prepareCall(procedimiento);
+			String usuario = this.usuario;
+			String nombre = this.nombre_registro;
+			String mail = this.mail_registro;
+			String password = this.password_registro;
+			insertado.setString(1, usuario);
+			insertado.setString(2, nombre);
+			insertado.setString(3, mail);
+			insertado.setString(4, password);
+			insertado.execute();
+			insertado.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 	}
 
