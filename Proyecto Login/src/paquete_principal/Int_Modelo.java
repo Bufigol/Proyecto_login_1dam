@@ -24,4 +24,6 @@ public interface Int_Modelo {
 
 	public boolean comprobar_correo_registro();
 
+	public boolean comprobar_ingreso_nombre();
+
 }

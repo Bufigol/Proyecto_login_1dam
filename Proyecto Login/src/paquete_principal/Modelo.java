@@ -254,4 +254,15 @@ public class Modelo implements Int_Modelo {
 		return false;
 
 	}
+
+	@Override
+	public boolean comprobar_ingreso_nombre() {
+		String nombre = this.nombre_registro;
+		int longitud = nombre.length();
+		if ((longitud > 0) && (longitud < 100)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
