@@ -1,8 +1,6 @@
 package paquete_principal;
 
 import java.sql.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Modelo implements Int_Modelo {
 	private Vis_Bienvenida bienvenida;
@@ -14,9 +12,7 @@ public class Modelo implements Int_Modelo {
 	private String usuario;
 	private String password_login;
 	private String mail_registro;
-	// patron para comprobar que el correo electronico esta bien ingresado
-	private static final String PATTERN_EMAIL = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
-			+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+
 
 	// Conexion con la base de datos
 	private String url_conexion_BD;
@@ -249,11 +245,7 @@ public class Modelo implements Int_Modelo {
 
 	@Override
 	public boolean comprobar_correo_registro() {
-		// TODO Auto-generated method stub
-		// Se "compila" el patron para poder compararlo con algo
-		Pattern patron_correo = Pattern.compile(PATTERN_EMAIL);
-		// Match the given input against this pattern
-		Matcher comprobador = patron_correo.matcher(this.mail_registro);
-		return comprobador.matches();
+		return false;
+
 	}
 }
