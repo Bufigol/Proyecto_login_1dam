@@ -81,7 +81,8 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 		// TODO Auto-generated method stub
 		set_Datos_en_modelo();
 		if (this.modelo.comprobar_password_registro()
-				&& this.modelo.comprobar_ingreso_nombre()) {
+				&& this.modelo.comprobar_ingreso_nombre()
+				&& this.modelo.comprobar_ingreso_usuario()) {
 			this.modelo.registrar_usuario_tabla();
 			return true;
 		} else {

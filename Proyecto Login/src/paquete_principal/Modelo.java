@@ -1,17 +1,23 @@
 package paquete_principal;
 
 import java.sql.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Modelo implements Int_Modelo {
 	private Vis_Bienvenida bienvenida;
 	private Vis_Login login;
 	private Vis_Registro registro;
+
+	// Los siguientes datos los pasa el controlador
 	private String nombre_registro;
 	private String password_registro;
 	private String repetir_password_registro;
 	private String usuario;
 	private String password_login;
 	private String mail_registro;
+
+	private Map<String, String> listaUsuarios;
 
 	// Conexion con la base de datos
 	private String url_conexion_BD;
@@ -36,6 +42,8 @@ public class Modelo implements Int_Modelo {
 		this.registro = registro;
 		this.url_conexion_BD = "jdbc:oracle:thin:@localhost:1521:XE";
 		conexion_BD(usuario_BD, password_BD);
+		this.listaUsuarios = new HashMap<String, String>();
+		importar_usuarios_y_passwords();
 	}
 
 	public void conexion_BD(String Usuario, String password) {
@@ -252,7 +260,6 @@ public class Modelo implements Int_Modelo {
 	@Override
 	public boolean comprobar_correo_registro() {
 		return false;
-
 	}
 
 	@Override
@@ -265,4 +272,38 @@ public class Modelo implements Int_Modelo {
 			return false;
 		}
 	}
+
+	@Override
+	public boolean comprobar_ingreso_usuario() {
+		// TODO Auto-generated method stub
+		boolean salida;
+		if (!this.listaUsuarios.containsKey(this.usuario)) {
+			salida = true;
+		} else {
+			salida = false;
+		}
+		return salida;
+	}
+
+	@Override
+	public void importar_usuarios_y_passwords() {
+		// TODO Auto-generated method stub
+		try {
+			Statement stmt = conexion_BD.createStatement();
+			ResultSet resultados = stmt
+					.executeQuery("SELECT USUARIO , PASSWORD FROM PROYECTO_LOGIN.USUARIOS_REGISTRADOS");
+			resultados.next();
+			while (!resultados.wasNull()) {
+				this.listaUsuarios.put(resultados.getString("USUARIO")
+						.toString(), resultados.getString("PASSWORD")
+						.toString());
+				resultados.next();
+			}
+			resultados.close();
+			stmt.close();
+		} catch (SQLException s) {
+			s.printStackTrace();
+		}
+	}
+
 }
