@@ -19,7 +19,7 @@ public class Modelo implements Int_Modelo {
 	private String mail_registro;
 
 	private Map<String, String> listaUsuarios;
-	private ArrayList<String []> listaEdificios;
+	private ArrayList<String[]> listaEdificios;
 
 	// Conexion con la base de datos
 	private String url_conexion_BD;
@@ -308,7 +308,7 @@ public class Modelo implements Int_Modelo {
 
 	// mostrar registros de la tabla Edificios
 
-	public ResultSet SeleccTodosEdificios() {
+	public void SeleccTodosEdificios() {
 		Statement st;
 
 		try {
@@ -320,8 +320,9 @@ public class Modelo implements Int_Modelo {
 			e.printStackTrace();
 
 		}
+	}
 
-		return rs;
+	public void insertado_datos_edificios_local(ResultSet entrada) {
 
 	}
 }
