@@ -299,7 +299,6 @@ public class Modelo implements Int_Modelo {
 			while (resultados.next()) {
 				this.listaUsuarios.put(resultados.getString(1).toString(),
 						resultados.getString(2).toString());
-				resultados.next();
 			}
 			resultados.close();
 			stmt.close();
@@ -331,7 +330,6 @@ public class Modelo implements Int_Modelo {
 				String[] paso = { entrada.getString(1), entrada.getString(2),
 						entrada.getString(3), entrada.getString(4) };
 				this.listaEdificios.add(paso);
-				entrada.next();
 			}
 
 		} catch (SQLException e) {
