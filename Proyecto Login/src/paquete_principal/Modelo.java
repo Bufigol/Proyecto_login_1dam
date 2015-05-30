@@ -1,6 +1,7 @@
 package paquete_principal;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,6 +19,7 @@ public class Modelo implements Int_Modelo {
 	private String mail_registro;
 
 	private Map<String, String> listaUsuarios;
+	private ArrayList<String []> listaEdificios;
 
 	// Conexion con la base de datos
 	private String url_conexion_BD;
