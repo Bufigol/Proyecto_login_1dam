@@ -4,6 +4,16 @@ import java.sql.Connection;
 
 import javax.swing.JFrame;
 
+/**
+ * Esta clase corresponde al inicio de las interfaces graficas para la
+ * interaccion con el usuario. El objetivo de esta clase es inicializar todas
+ * las clases, establecer la conexion con la base de datos y dejar como ventana
+ * visible para el usuario la correspondiente al inicio de sesion.
+ * 
+ * @author FelipeAndrés
+ *
+ */
+@SuppressWarnings("serial")
 public class Launcher extends JFrame {
 
 	public static void main(String[] args) {
