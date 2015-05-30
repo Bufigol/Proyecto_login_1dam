@@ -5,6 +5,7 @@
  */
 package paquete_principal;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
@@ -31,5 +32,14 @@ public interface Int_Modelo {
 	public boolean comprobar_ingreso_nombre();
 
 	public boolean comprobar_ingreso_usuario();
+
+	/**
+	 * Metodo para la obtención de los datos alojados en la base de datos en la
+	 * tabla "EDIFICIOS", para que de esta manera se pueda hacer alta,baja y
+	 * modificación de datos en la misma
+	 * 
+	 * @return
+	 */
+	public ResultSet SeleccTodosEdificios();
 
 }

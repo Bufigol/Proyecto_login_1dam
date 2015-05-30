@@ -304,4 +304,22 @@ public class Modelo implements Int_Modelo {
 		}
 	}
 
+	// mostrar registros de la tabla Edificios
+
+	public ResultSet SeleccTodosEdificios() {
+		Statement st;
+
+		try {
+			st = conexion_BD.createStatement();
+
+			ResultSet rs = st.executeQuery("SELECT * FROM EDIFICIOS");
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+
+		}
+
+		return rs;
+
+	}
 }
