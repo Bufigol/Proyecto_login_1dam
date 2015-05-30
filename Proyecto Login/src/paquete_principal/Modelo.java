@@ -228,7 +228,7 @@ public class Modelo implements Int_Modelo {
 	public boolean comprobar_Pasword_login() {
 		String usuario = this.login.getUsuario();
 		String password = this.login.getPassword();
-		if (usuario.equals(password)) {
+		if (this.listaUsuarios.get(usuario).toString().equals(password)) {
 			return true;
 		} else {
 			return false;
@@ -292,11 +292,9 @@ public class Modelo implements Int_Modelo {
 			Statement stmt = conexion_BD.createStatement();
 			ResultSet resultados = stmt
 					.executeQuery("SELECT USUARIO , PASSWORD FROM PROYECTO_LOGIN.USUARIOS_REGISTRADOS");
-			resultados.next();
-			while (!resultados.wasNull()) {
-				this.listaUsuarios.put(resultados.getString("USUARIO")
-						.toString(), resultados.getString("PASSWORD")
-						.toString());
+			while (resultados.next()) {
+				this.listaUsuarios.put(resultados.getString(1).toString(),
+						resultados.getString(2).toString());
 				resultados.next();
 			}
 			resultados.close();
