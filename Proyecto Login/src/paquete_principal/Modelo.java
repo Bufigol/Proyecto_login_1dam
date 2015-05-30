@@ -47,6 +47,7 @@ public class Modelo implements Int_Modelo {
 		this.listaUsuarios = new HashMap<String, String>();
 		importar_usuarios_y_passwords();
 		this.listaEdificios = new ArrayList<String[]>();
+		SeleccTodosEdificios();
 	}
 
 	public void conexion_BD(String Usuario, String password) {
@@ -314,7 +315,7 @@ public class Modelo implements Int_Modelo {
 		try {
 			st = conexion_BD.createStatement();
 			ResultSet resultados_edificios = st
-					.executeQuery("SELECT * FROM EDIFICIOS");
+					.executeQuery("SELECT * FROM PROYECTO_LOGIN.EDIFICIOS");
 			insertado_datos_edificios_local(resultados_edificios);
 			resultados_edificios.close();
 			st.close();
