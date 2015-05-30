@@ -15,6 +15,7 @@ import javax.swing.JButton;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Rectangle;
 
 /**
  *
@@ -43,6 +44,7 @@ public class Vis_Registro extends JFrame implements Int_Registro {
 	 * Creates new form Vis_Registro
 	 */
 	public Vis_Registro() {
+		setBounds(new Rectangle(0, 0, 550, 0));
 		initComponents();
 	}
 
@@ -119,168 +121,73 @@ public class Vis_Registro extends JFrame implements Int_Registro {
 
 		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(
 				getContentPane());
-		layout.setHorizontalGroup(layout
-				.createParallelGroup(Alignment.TRAILING)
-				.addGroup(
-						layout.createSequentialGroup()
-								.addGroup(
-										layout.createParallelGroup(
-												Alignment.TRAILING)
-												.addGroup(
-														layout.createSequentialGroup()
-																.addContainerGap()
-																.addComponent(
-																		btnRegistrarse))
-												.addGroup(
-														layout.createSequentialGroup()
-																.addGap(42)
-																.addGroup(
-																		layout.createParallelGroup(
-																				Alignment.LEADING)
-																				.addComponent(
-																						lblRepetirPassword,
-																						GroupLayout.DEFAULT_SIZE,
-																						94,
-																						Short.MAX_VALUE)
-																				.addComponent(
-																						lblPassword,
-																						GroupLayout.DEFAULT_SIZE,
-																						94,
-																						Short.MAX_VALUE)
-																				.addComponent(
-																						lblNombre,
-																						GroupLayout.PREFERRED_SIZE,
-																						48,
-																						GroupLayout.PREFERRED_SIZE)
-																				.addGroup(
-																						layout.createParallelGroup(
-																								Alignment.TRAILING)
-																								.addComponent(
-																										lblUsuario,
-																										GroupLayout.PREFERRED_SIZE,
-																										45,
-																										GroupLayout.PREFERRED_SIZE)
-																								.addComponent(
-																										lblCorreo,
-																										GroupLayout.PREFERRED_SIZE,
-																										44,
-																										GroupLayout.PREFERRED_SIZE))
-																				.addGroup(
-																						layout.createSequentialGroup()
-																								.addComponent(
-																										lblErrores)
-																								.addPreferredGap(
-																										ComponentPlacement.RELATED)))))
-								.addGroup(
-										layout.createParallelGroup(
-												Alignment.LEADING)
-												.addGroup(
-														layout.createSequentialGroup()
-																.addGap(19)
-																.addGroup(
-																		layout.createParallelGroup(
-																				Alignment.TRAILING)
-																				.addComponent(
-																						TxF_Pass,
-																						GroupLayout.PREFERRED_SIZE,
-																						146,
-																						GroupLayout.PREFERRED_SIZE)
-																				.addComponent(
-																						TxF_RepPass,
-																						GroupLayout.PREFERRED_SIZE,
-																						146,
-																						GroupLayout.PREFERRED_SIZE)
-																				.addComponent(
-																						TxF_Correo,
-																						GroupLayout.PREFERRED_SIZE,
-																						146,
-																						GroupLayout.PREFERRED_SIZE)
-																				.addComponent(
-																						TxF_Usuario,
-																						GroupLayout.PREFERRED_SIZE,
-																						146,
-																						GroupLayout.PREFERRED_SIZE)
-																				.addComponent(
-																						TxF_Nombre,
-																						GroupLayout.PREFERRED_SIZE,
-																						146,
-																						GroupLayout.PREFERRED_SIZE)))
-												.addGroup(
-														layout.createSequentialGroup()
-																.addPreferredGap(
-																		ComponentPlacement.RELATED)
-																.addComponent(
-																		btnCancelar)
-																.addPreferredGap(
-																		ComponentPlacement.RELATED)
-																.addComponent(
-																		btnSalir)))
-								.addGap(55)));
-		layout.setVerticalGroup(layout
-				.createParallelGroup(Alignment.LEADING)
-				.addGroup(
-						layout.createSequentialGroup()
-								.addGap(32)
-								.addGroup(
-										layout.createParallelGroup(
-												Alignment.BASELINE)
-												.addComponent(
-														TxF_Nombre,
-														GroupLayout.PREFERRED_SIZE,
-														GroupLayout.DEFAULT_SIZE,
-														GroupLayout.PREFERRED_SIZE)
-												.addComponent(lblNombre))
-								.addGap(18)
-								.addGroup(
-										layout.createParallelGroup(
-												Alignment.BASELINE)
-												.addComponent(
-														TxF_Usuario,
-														GroupLayout.PREFERRED_SIZE,
-														GroupLayout.DEFAULT_SIZE,
-														GroupLayout.PREFERRED_SIZE)
-												.addComponent(lblUsuario))
-								.addGap(18)
-								.addGroup(
-										layout.createParallelGroup(
-												Alignment.BASELINE)
-												.addComponent(
-														TxF_Correo,
-														GroupLayout.PREFERRED_SIZE,
-														GroupLayout.DEFAULT_SIZE,
-														GroupLayout.PREFERRED_SIZE)
-												.addComponent(lblCorreo))
-								.addGap(18)
-								.addGroup(
-										layout.createParallelGroup(
-												Alignment.BASELINE)
-												.addComponent(lblPassword)
-												.addComponent(
-														TxF_Pass,
-														GroupLayout.PREFERRED_SIZE,
-														GroupLayout.DEFAULT_SIZE,
-														GroupLayout.PREFERRED_SIZE))
-								.addGap(18)
-								.addGroup(
-										layout.createParallelGroup(
-												Alignment.BASELINE)
-												.addComponent(
-														TxF_RepPass,
-														GroupLayout.PREFERRED_SIZE,
-														GroupLayout.DEFAULT_SIZE,
-														GroupLayout.PREFERRED_SIZE)
-												.addComponent(
-														lblRepetirPassword))
-								.addGap(15)
-								.addComponent(lblErrores)
-								.addGap(18)
-								.addGroup(
-										layout.createParallelGroup(
-												Alignment.BASELINE)
-												.addComponent(btnRegistrarse)
-												.addComponent(btnCancelar)
-												.addComponent(btnSalir))
-								.addContainerGap(56, Short.MAX_VALUE)));
+		layout.setHorizontalGroup(
+			layout.createParallelGroup(Alignment.TRAILING)
+				.addGroup(layout.createSequentialGroup()
+					.addGroup(layout.createParallelGroup(Alignment.TRAILING)
+						.addGroup(layout.createSequentialGroup()
+							.addContainerGap()
+							.addComponent(btnRegistrarse))
+						.addGroup(layout.createSequentialGroup()
+							.addGap(42)
+							.addGroup(layout.createParallelGroup(Alignment.LEADING)
+								.addComponent(lblRepetirPassword, GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+								.addComponent(lblPassword, GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE)
+								.addComponent(lblNombre, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE)
+								.addGroup(layout.createParallelGroup(Alignment.TRAILING)
+									.addComponent(lblUsuario, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
+									.addComponent(lblCorreo, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE))
+								.addGroup(layout.createSequentialGroup()
+									.addComponent(lblErrores)
+									.addPreferredGap(ComponentPlacement.RELATED)))))
+					.addGroup(layout.createParallelGroup(Alignment.LEADING)
+						.addGroup(layout.createSequentialGroup()
+							.addGap(19)
+							.addGroup(layout.createParallelGroup(Alignment.TRAILING)
+								.addComponent(TxF_Pass, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE)
+								.addComponent(TxF_RepPass, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE)
+								.addComponent(TxF_Correo, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE)
+								.addComponent(TxF_Usuario, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE)
+								.addComponent(TxF_Nombre, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE)))
+						.addGroup(layout.createSequentialGroup()
+							.addGap(18)
+							.addComponent(btnCancelar)
+							.addGap(18)
+							.addComponent(btnSalir)))
+					.addGap(55))
+		);
+		layout.setVerticalGroup(
+			layout.createParallelGroup(Alignment.LEADING)
+				.addGroup(layout.createSequentialGroup()
+					.addGap(32)
+					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(TxF_Nombre, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblNombre))
+					.addGap(18)
+					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(TxF_Usuario, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblUsuario))
+					.addGap(18)
+					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(TxF_Correo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblCorreo))
+					.addGap(18)
+					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(lblPassword)
+						.addComponent(TxF_Pass, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+					.addGap(18)
+					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(TxF_RepPass, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblRepetirPassword))
+					.addGap(15)
+					.addComponent(lblErrores)
+					.addGap(18)
+					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+						.addComponent(btnRegistrarse)
+						.addComponent(btnCancelar)
+						.addComponent(btnSalir))
+					.addContainerGap(56, Short.MAX_VALUE))
+		);
 		getContentPane().setLayout(layout);
 
 		pack();
