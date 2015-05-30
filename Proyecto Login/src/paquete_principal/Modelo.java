@@ -17,7 +17,7 @@ public class Modelo implements Int_Modelo {
 	private String usuario;
 	private String password_login;
 	private String mail_registro;
-
+	// Listas para el trabajo de datos de manera local
 	private Map<String, String> listaUsuarios;
 	private ArrayList<String[]> listaEdificios;
 
@@ -46,6 +46,7 @@ public class Modelo implements Int_Modelo {
 		conexion_BD(usuario_BD, password_BD);
 		this.listaUsuarios = new HashMap<String, String>();
 		importar_usuarios_y_passwords();
+		this.listaEdificios = new ArrayList<String[]>();
 	}
 
 	public void conexion_BD(String Usuario, String password) {
@@ -310,12 +311,13 @@ public class Modelo implements Int_Modelo {
 
 	public void SeleccTodosEdificios() {
 		Statement st;
-
 		try {
 			st = conexion_BD.createStatement();
-
-			ResultSet rs = st.executeQuery("SELECT * FROM EDIFICIOS");
-
+			ResultSet resultados_edificios = st
+					.executeQuery("SELECT * FROM EDIFICIOS");
+			insertado_datos_edificios_local(resultados_edificios);
+			resultados_edificios.close();
+			st.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 
@@ -323,6 +325,17 @@ public class Modelo implements Int_Modelo {
 	}
 
 	public void insertado_datos_edificios_local(ResultSet entrada) {
+		try {
+			while (entrada.next()) {
+				String[] paso = { entrada.getString(1), entrada.getString(2),
+						entrada.getString(3), entrada.getString(4) };
+				this.listaEdificios.add(paso);
+				entrada.next();
+			}
 
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
