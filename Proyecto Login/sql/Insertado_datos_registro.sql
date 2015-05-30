@@ -8,4 +8,6 @@ begin
 
    INSERT INTO USUARIOS_REGISTRADOS (USUARIO , NOMBRE_COMPLETO , CORREO_ELECTRONICO , PASSWORD ) VALUES (usuario_ingreso , nombre_ingresado , correo_ingresado , password_ingresado);
 
-end;​
+end;
+
+​​
