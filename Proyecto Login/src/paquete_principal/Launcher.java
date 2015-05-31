@@ -25,7 +25,7 @@ public class Launcher extends JFrame {
 		Vis_Registro pantallaRegistro = new Vis_Registro();
 
 		Modelo modelo = new Modelo(pantallaBienvenida, PantallaInicial,
-				pantallaRegistro, "SYSTEM", "Dx4ever.");
+				pantallaRegistro, "SYSTEM", "");
 
 		modelo.setVis_Login(PantallaInicial);
 		modelo.setVis_Registro(pantallaRegistro);
