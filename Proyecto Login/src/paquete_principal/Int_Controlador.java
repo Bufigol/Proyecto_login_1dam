@@ -25,6 +25,8 @@ public interface Int_Controlador {
 
 	public void Registro_A_Bienvenido();
 
+	public void Bienvenido_A_Inicio();
+
 	public void Cerrar();
 
 	public void cancelar_Registro();
@@ -52,7 +54,5 @@ public interface Int_Controlador {
 	public boolean iniciar_sesion_login();
 
 	public boolean registrar_nuevo_usuario();
-
-	
 
 }

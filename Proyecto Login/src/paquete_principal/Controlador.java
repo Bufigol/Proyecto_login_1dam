@@ -58,7 +58,6 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 	public void Registro_A_Bienvenido() {
 		this.Registro.setVisible(false);
 		this.Bienvenida.setVisible(true);
-		this.Bienvenida.getFrmWelcome().setVisible(true);
 	}
 
 	/**
@@ -193,6 +192,11 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 				this.Bienvenida.getTxfCiudad(),
 				this.Bienvenida.getTxfArquitecto(),
 				this.Bienvenida.getTxfLocalizacion());
+	}
+
+	public void Bienvenido_A_Inicio() {
+		this.Bienvenida.setVisible(false);
+		this.LogIn.setVisible(true);
 	}
 
 }
