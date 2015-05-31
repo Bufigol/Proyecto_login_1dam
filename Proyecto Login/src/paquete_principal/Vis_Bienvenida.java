@@ -169,7 +169,7 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 						tblEdificios.getSelectedRow(), 3);
 				model.setValueAt(txfLocalizacion.getText(),
 						tblEdificios.getSelectedRow(), 4);
-				controlador.baja_edificio();
+				controlador.actualizacion_edificio();
 			}
 		});
 

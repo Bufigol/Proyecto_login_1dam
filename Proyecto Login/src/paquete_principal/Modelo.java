@@ -483,7 +483,7 @@ public class Modelo implements Int_Modelo {
 			String NOMBRE_ingreso, String PAIS_ingreso, String CIUDAD_ingreso,
 			String ARQUITECTO_ingreso, String LOCALIZACION_ingreso) {
 		// TODO Auto-generated method stub
-		String procedimiento = "{call PROYECTO_LOGIN.INSERTADO_DATOS_EDIFICIO (?,?,?,?,?,?)}";
+		String procedimiento = "{call PROYECTO_LOGIN.ACTUALIZAR_DATO_EDIFICIO (?,?,?,?,?,?)}";
 		try {
 			CallableStatement actualizar = conexion_BD
 					.prepareCall(procedimiento);
