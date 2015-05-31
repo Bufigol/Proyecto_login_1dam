@@ -86,6 +86,7 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 			this.modelo.registrar_usuario_tabla();
 			return true;
 		} else {
+			cambiar_LblError_registro();
 			return false;
 		}
 	}
@@ -103,4 +104,10 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 		this.modelo.setUsuario(this.Registro.getTxF_Usuario().toString());
 	}
 
+	public void cambiar_LblError_registro() {
+		if (!this.modelo.comprobar_password_registro()) {
+			this.Registro.setLblErrores("Las contraseñas no coinciden");
+		}
+
+	}
 }

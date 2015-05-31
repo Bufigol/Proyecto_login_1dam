@@ -14,6 +14,16 @@ public interface Int_Registro {
 
 	public void setModelo(Modelo modelo);
 
+	/**
+	 * Metodo utiliazdo por el controlador, segun los datos de errores dados por
+	 * el modelo que cambian una etiqueta en la pantalla de registro informando
+	 * al usuario de que error hay en el registro.
+	 * 
+	 * @param mensaje
+	 *            Parametro que guarda el mensaje a mostrar al usuario.
+	 */
+	public void setLblErrores(String mensaje);
+
 	public String getTxF_Usuario();
 
 	public String getTxF_Pass();
@@ -21,8 +31,5 @@ public interface Int_Registro {
 	public String getTxF_RepPass();
 
 	public String getTxF_Correo();
-
-
-	
 
 }

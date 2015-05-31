@@ -25,14 +25,19 @@ public interface Int_Controlador {
 
 	public void Registro_A_Bienvenido();
 
-	public boolean registrar_nuevo_usuario();
-
 	public void Cerrar();
 
 	public void cancelar_Registro();
 
 	public void set_Datos_en_modelo();
 
+	/**
+	 * Metodo que comprueba los errores que hay en el registro para mostrar un
+	 * mensaje por cada posibilidad de error que se tiene implementada.
+	 */
+	public void cambiar_LblError_registro();
+
 	public boolean iniciar_sesion_login();
 
+	public boolean registrar_nuevo_usuario();
 }

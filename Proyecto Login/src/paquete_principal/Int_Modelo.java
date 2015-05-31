@@ -36,6 +36,14 @@ public interface Int_Modelo {
 
 	public boolean comprobar_Pasword_login();
 
+	/**
+	 * Metodo para la comprobación del ingreso de la contraseña en el proceso de
+	 * registro.
+	 * 
+	 * @return true si la comprobación de la contraseña es correcta, y falso si
+	 *         la primera contraseña ingresada no coincide con la ingresada en
+	 *         el campo de comprobacion.
+	 */
 	public boolean comprobar_password_registro();
 
 	public boolean comprobar_correo_registro();
