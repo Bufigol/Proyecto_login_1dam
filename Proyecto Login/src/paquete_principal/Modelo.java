@@ -460,4 +460,39 @@ public class Modelo implements Int_Modelo {
 		}
 
 	}
+
+	@Override
+	public void insertar_dato_edificio(String NOMBRE_ingreso,
+			String PAIS_ingreso, String CIUDAD_ingreso,
+			String ARQUITECTO_ingreso, String LOCALIZACION_ingreso) {
+		String procedimiento = "{call PROYECTO_LOGIN.INSERTADO_DATOS_EDIFICIO (?,?,?,?,?)}";
+		try {
+			CallableStatement insertado = conexion_BD
+					.prepareCall(procedimiento);
+			insertado.setString(1, NOMBRE_ingreso);
+			insertado.setString(2, PAIS_ingreso);
+			insertado.setString(3, CIUDAD_ingreso);
+			insertado.setString(4, ARQUITECTO_ingreso);
+			insertado.setString(4, LOCALIZACION_ingreso);
+			insertado.execute();
+			insertado.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	@Override
+	public void actualizar_dato_edificio(String NOMBRE_ORIGINAL,
+			String NOMBRE_ingreso, String PAIS_ingreso, String CIUDAD_ingreso,
+			String ARQUITECTO_ingreso, String LOCALIZACION_ingreso) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void borrar_dato_edificio(String NOMBRE_ORIGINAL) {
+		// TODO Auto-generated method stub
+
+	}
 }
