@@ -360,7 +360,13 @@ public class Modelo implements Int_Modelo {
 	public boolean todos_campos_ingresados_registro() {
 		int longitud_usuario = this.usuario.length();
 		int longitud_nombre = this.nombre_registro.length();
-		if ((longitud_usuario > 0) && (longitud_nombre > 0)) {
+		int longitud_pass = this.password_registro.length();
+		int longitud_rep_pass = this.repetir_password_registro.length();
+		int longitud_mail = this.mail_registro.length();
+
+		if ((longitud_usuario > 0) && (longitud_nombre > 0)
+				&& (longitud_pass > 0) && (longitud_rep_pass > 0)
+				&& (longitud_mail > 0)) {
 			return true;
 		} else {
 			return false;
