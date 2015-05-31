@@ -71,6 +71,12 @@ public interface Int_Modelo {
 	 */
 	public boolean comprobacion_completa_usuario();
 
+	/**
+	 * Metdo para la comprobacion de ingreso de un correo electronico valido.
+	 * 
+	 * @return True si se ingreso un correo electronico valido y false en
+	 *         cualquier otro caso.
+	 */
 	public boolean comprobar_correo_registro();
 
 	/**

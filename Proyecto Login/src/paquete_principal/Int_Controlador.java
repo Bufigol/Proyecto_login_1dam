@@ -37,6 +37,12 @@ public interface Int_Controlador {
 	 */
 	public void informar_errores_registro();
 
+	/**
+	 * Metodo que eleimina el texto de las etiquetas de error del proceso de
+	 * registro. Es el contrario del metodo {@link #informar_errores_registro()}
+	 */
+	public void borrar_errores_registro();
+
 	public boolean iniciar_sesion_login();
 
 	public boolean registrar_nuevo_usuario();

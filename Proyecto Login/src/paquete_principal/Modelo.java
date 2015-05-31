@@ -279,9 +279,76 @@ public class Modelo implements Int_Modelo {
 		}
 	}
 
+	private boolean buscar_espacios() {
+		boolean salida = true;
+		int letra = 0;
+		Character paso;
+		if (this.mail_registro.length() > 0) {
+			do {
+				paso = this.mail_registro.charAt(letra);
+				if (paso.toString().equals(" ")) {
+					salida = false;
+				}
+				letra++;
+			} while (salida && (letra < this.mail_registro.length()));
+		} else {
+			salida = false;
+		}
+
+		return salida;
+	}
+
+	private boolean solo_una_arroba() {
+		boolean salida = true;
+		Character arroba = "@".charAt(0);
+		if (this.mail_registro.length() > 0) {
+			int contador = 0;
+			for (int i = 0; i < this.mail_registro.length(); i++) {
+				if (this.mail_registro.charAt(i) == arroba) {
+					contador++;
+				}
+			}
+			if (contador != 1) {
+				salida = false;
+			} else {
+				salida = true;
+			}
+		} else {
+			salida = false;
+		}
+		return salida;
+	}
+
+	private boolean puntos_despues() {
+		boolean salida = false;
+		if (solo_una_arroba() && (this.mail_registro.length() > 0)) {
+			int inicio = this.mail_registro.indexOf("@".charAt(0));
+			int contador = 0;
+			Character punto = ".".charAt(0);
+			for (int i = inicio; i < this.mail_registro.length(); i++) {
+				if (punto.equals(this.mail_registro.charAt(i))) {
+					contador++;
+				}
+			}
+			if (contador == 1) {
+				salida = true;
+			} else {
+				salida = false;
+			}
+		}
+		return salida;
+	}
+
 	@Override
 	public boolean comprobar_correo_registro() {
-		return false;
+		boolean salida = false;
+		if (buscar_espacios() && puntos_despues()
+				&& (this.mail_registro.length() > 0)) {
+			salida = true;
+		} else {
+			salida = false;
+		}
+		return salida;
 	}
 
 	@Override

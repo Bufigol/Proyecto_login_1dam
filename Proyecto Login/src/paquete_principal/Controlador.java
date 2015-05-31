@@ -83,11 +83,13 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 		if (this.modelo.comprobar_password_registro()
 				&& this.modelo.comprobar_ingreso_nombre()
 				&& this.modelo.comprobar_ingreso_usuario()
+				&& this.modelo.comprobar_correo_registro()
 				&& this.modelo.todos_campos_ingresados_registro()) {
 			this.modelo.registrar_usuario_tabla();
 			return true;
 		} else {
 			informar_errores_registro();
+			borrar_errores_registro();
 			return false;
 		}
 	}
@@ -141,13 +143,35 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 				this.Registro
 						.setLblErroresNombre("Por favor ingrese su nombre.");
 			}
+			// comprobacion de correo electronico
 			if (!this.modelo.comprobar_correo_registro()) {
 				this.Registro
 						.setLblErroresCorreo("Por favor ingrese un correo electronico valido.");
 			}
 
 		}
+	}
 
+	public void borrar_errores_registro() {
+		if (!this.modelo.todos_campos_ingresados_registro()) {
+			// comprobaciones de usuario
+			if (modelo.comprobacion_completa_password_registro()) {
+				this.Registro.setLblErroresPassword(".");
+			}
+			// comprobaciones de usuario
+			if (this.modelo.comprobacion_completa_usuario()) {
+				this.Registro.setLblErroresUsuario("");
+			}
+			// comprobar que se ha ingresado algo en el nombre
+			if (this.modelo.comprobar_ingreso_nombre()) {
+				this.Registro.setLblErroresNombre("");
+			}
+			// comprobacion de correo electronico
+			if (this.modelo.comprobar_correo_registro()) {
+				this.Registro.setLblErroresCorreo("");
+			}
+
+		}
 	}
 
 }
