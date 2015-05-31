@@ -487,7 +487,21 @@ public class Modelo implements Int_Modelo {
 			String NOMBRE_ingreso, String PAIS_ingreso, String CIUDAD_ingreso,
 			String ARQUITECTO_ingreso, String LOCALIZACION_ingreso) {
 		// TODO Auto-generated method stub
-
+		String procedimiento = "{call PROYECTO_LOGIN.INSERTADO_DATOS_EDIFICIO (?,?,?,?,?,?)}";
+		try {
+			CallableStatement actualizar = conexion_BD
+					.prepareCall(procedimiento);
+			actualizar.setString(1, NOMBRE_ORIGINAL);
+			actualizar.setString(2, NOMBRE_ingreso);
+			actualizar.setString(3, PAIS_ingreso);
+			actualizar.setString(4, CIUDAD_ingreso);
+			actualizar.setString(5, ARQUITECTO_ingreso);
+			actualizar.setString(6, LOCALIZACION_ingreso);
+			actualizar.execute();
+			actualizar.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
