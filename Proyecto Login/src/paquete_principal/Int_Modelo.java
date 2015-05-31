@@ -13,14 +13,25 @@ import java.sql.SQLException;
  * @author 21414215
  */
 public interface Int_Modelo {
+
 	public void setVis_Login(Vis_Login Login);
 
 	public void setVis_Registro(Vis_Registro Registro);
 
 	public void setVis_Bienvenida(Vis_Bienvenida bienvenida);
 
+	/**
+	 * Metodo implementado para poder trabajar con los nombres de usuarios y sus
+	 * respectivas contraseñas de manera local y poder hacer las comprobaciones
+	 * pernitentes de registros de nuevos usuarios y de inicio de sesion.
+	 */
 	public void importar_usuarios_y_passwords();
 
+	/**
+	 * Metodo que le indica a la base de datos que hay que insertar un nuevo
+	 * registro a la tabla USUARIOS_REGISTRADOS.Los parametros utilizados para
+	 * este fin son los almacenados como atributos de la clase Modelo.
+	 */
 	public void registrar_usuario_tabla();
 
 	public boolean comprobar_Pasword_login();
