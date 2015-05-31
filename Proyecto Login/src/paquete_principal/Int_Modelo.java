@@ -23,17 +23,6 @@ public interface Int_Modelo {
 
 	public void registrar_usuario_tabla();
 
-	/**
-	 * Metodo que tiene como objetivo la obtencion de datos de la tabla
-	 * edificios. Se obtienen los datos a través de una sentencia plsql para
-	 * poder trabajar con ellos de manera local. El obetivo es que despues de
-	 * cualquier interaccion con estoas datos se hagan las mismas acciones sobre
-	 * la base de daatos.
-	 * 
-	 * @param entrada
-	 */
-	public void insertado_datos_edificios_local(ResultSet entrada);
-
 	public boolean comprobar_Pasword_login();
 
 	/**
@@ -126,5 +115,7 @@ public interface Int_Modelo {
 			String ARQUITECTO_ingreso, String LOCALIZACION_ingreso);
 
 	public void borrar_dato_edificio(String NOMBRE_ORIGINAL);
+
+	public ResultSet getResultadosEdificios();
 
 }

@@ -19,6 +19,7 @@ public class Modelo implements Int_Modelo {
 	private String mail_registro;
 	// Listas para el trabajo de datos de manera local
 	private Map<String, String> listaUsuarios;
+	private ResultSet datosEdificios;
 
 	// Conexion con la base de datos
 	private String url_conexion_BD;
@@ -398,24 +399,12 @@ public class Modelo implements Int_Modelo {
 			st = conexion_BD.createStatement();
 			ResultSet resultados_edificios = st
 					.executeQuery("SELECT * FROM PROYECTO_LOGIN.EDIFICIOS");
-			insertado_datos_edificios_local(resultados_edificios);
+			this.datosEdificios = resultados_edificios;
 			resultados_edificios.close();
 			st.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 
-		}
-	}
-
-	public void insertado_datos_edificios_local(ResultSet entrada) {
-		try {
-			while (entrada.next()) {
-				;
-			}
-
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 	}
 
@@ -512,5 +501,9 @@ public class Modelo implements Int_Modelo {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public ResultSet getResultadosEdificios() {
+		return this.datosEdificios;
 	}
 }
