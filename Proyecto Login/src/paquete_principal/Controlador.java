@@ -170,8 +170,11 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 			if (this.modelo.comprobar_correo_registro()) {
 				this.Registro.setLblErroresCorreo("");
 			}
-
 		}
+	}
+
+	public void nuevo_registro_edificio() {
+
 	}
 
 }

@@ -43,6 +43,8 @@ public interface Int_Controlador {
 	 */
 	public void borrar_errores_registro();
 
+	public void nuevo_registro_edificio();
+
 	public boolean iniciar_sesion_login();
 
 	public boolean registrar_nuevo_usuario();

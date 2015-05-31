@@ -44,7 +44,7 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 	private JLabel lblCiudad;
 	private JTextField txfArquitecto;
 	private JLabel lblArquitecto;
-	private JTextField textField;
+	private JTextField txfLocalizacion;
 	private JLabel lblLocalizacion;
 
 	/**
@@ -74,10 +74,10 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 
 				DefaultTableModel model = (DefaultTableModel) tblEdificios
 						.getModel();
-				txfNombre.setText(model.getValueAt(tblEdificios.getSelectedRow(),
-						0).toString());
-				txfPais.setText(model.getValueAt(
-						tblEdificios.getSelectedRow(), 1).toString());
+				txfNombre.setText(model.getValueAt(
+						tblEdificios.getSelectedRow(), 0).toString());
+				txfPais.setText(model.getValueAt(tblEdificios.getSelectedRow(),
+						1).toString());
 				txfCiudad.setText(model.getValueAt(
 						tblEdificios.getSelectedRow(), 2).toString());
 
@@ -205,21 +205,21 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 		lblMensaje.setForeground(Color.RED);
 		lblMensaje.setBounds(90, 266, 633, 40);
 		getFrmWelcome().getContentPane().add(lblMensaje);
-		
+
 		txfArquitecto = new JTextField();
 		txfArquitecto.setBounds(456, 347, 112, 33);
 		frmWelcome.getContentPane().add(txfArquitecto);
 		txfArquitecto.setColumns(10);
-		
+
 		lblArquitecto = new JLabel("Arquitecto");
 		lblArquitecto.setBounds(456, 323, 81, 14);
 		frmWelcome.getContentPane().add(lblArquitecto);
-		
-		textField = new JTextField();
-		textField.setBounds(578, 347, 112, 33);
-		frmWelcome.getContentPane().add(textField);
-		textField.setColumns(10);
-		
+
+		txfLocalizacion = new JTextField();
+		txfLocalizacion.setBounds(578, 347, 112, 33);
+		frmWelcome.getContentPane().add(txfLocalizacion);
+		txfLocalizacion.setColumns(10);
+
 		lblLocalizacion = new JLabel("Localizacion");
 		lblLocalizacion.setBounds(578, 323, 112, 14);
 		frmWelcome.getContentPane().add(lblLocalizacion);
@@ -251,5 +251,40 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 	 */
 	public JTable getTblEdificios() {
 		return tblEdificios;
+	}
+
+	/**
+	 * @return the txfNombre
+	 */
+	public String getTxfNombre() {
+		return txfNombre.getText();
+	}
+
+	/**
+	 * @return the txfPais
+	 */
+	public String getTxfPais() {
+		return txfPais.getText();
+	}
+
+	/**
+	 * @return the txfCiudad
+	 */
+	public String getTxfCiudad() {
+		return txfCiudad.getText();
+	}
+
+	/**
+	 * @return the txfArquitecto
+	 */
+	public String getTxfArquitecto() {
+		return txfArquitecto.getText();
+	}
+
+	/**
+	 * @return the txfLocalizacion
+	 */
+	public String getTxfLocalizacion() {
+		return txfLocalizacion.getText();
 	}
 }
