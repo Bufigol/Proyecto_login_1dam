@@ -19,7 +19,6 @@ public class Modelo implements Int_Modelo {
 	private String mail_registro;
 	// Listas para el trabajo de datos de manera local
 	private Map<String, String> listaUsuarios;
-	private ArrayList<String[]> listaEdificios;
 
 	// Conexion con la base de datos
 	private String url_conexion_BD;
@@ -46,7 +45,6 @@ public class Modelo implements Int_Modelo {
 		conexion_BD(usuario_BD, password_BD);
 		this.listaUsuarios = new HashMap<String, String>();
 		importar_usuarios_y_passwords();
-		this.listaEdificios = new ArrayList<String[]>();
 		SeleccTodosEdificios();
 	}
 
@@ -412,9 +410,7 @@ public class Modelo implements Int_Modelo {
 	public void insertado_datos_edificios_local(ResultSet entrada) {
 		try {
 			while (entrada.next()) {
-				String[] paso = { entrada.getString(1), entrada.getString(2),
-						entrada.getString(3), entrada.getString(4) };
-				this.listaEdificios.add(paso);
+;
 			}
 
 		} catch (SQLException e) {

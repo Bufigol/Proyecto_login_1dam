@@ -27,17 +27,25 @@ import java.awt.event.MouseEvent;
 public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 
 	private JFrame frmWelcome;
-	private JTable tblUsuario;
+	private JTable tblEdificios;
 	private JButton btnAlta;
 	private JButton btnBaja;
 	private JButton btnModificacion;
 	private JButton btnSalir;
-	private JTextField txfNick;
 	private JTextField txfNombre;
-	private JTextField txfApellidos;
+	private JTextField txfPais;
+	private JTextField txfCiudad;
 	private JLabel lblMensaje;
 	private Modelo modelo;
 	private Controlador controlador;
+	private JScrollPane scrollPane;
+	private JLabel lblNombre;
+	private JLabel lblPais;
+	private JLabel lblCiudad;
+	private JTextField txfArquitecto;
+	private JLabel lblArquitecto;
+	private JTextField textField;
+	private JLabel lblLocalizacion;
 
 	/**
 	 * Create the application.
@@ -55,30 +63,31 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 		getFrmWelcome().setBounds(50, 100, 850, 600);
 		getFrmWelcome().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		JScrollPane scrollPane = new JScrollPane();
+		scrollPane = new JScrollPane();
 
 		scrollPane.setBounds(90, 33, 633, 220);
 
-		tblUsuario = new JTable();
-		tblUsuario.addMouseListener(new MouseAdapter() {
+		tblEdificios = new JTable();
+		tblEdificios.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 
-				DefaultTableModel model = (DefaultTableModel) tblUsuario
+				DefaultTableModel model = (DefaultTableModel) tblEdificios
 						.getModel();
-				txfNick.setText(model
-						.getValueAt(tblUsuario.getSelectedRow(), 0).toString());
-				txfNombre.setText(model.getValueAt(tblUsuario.getSelectedRow(),
-						1).toString());
-				txfApellidos.setText(model.getValueAt(
-						tblUsuario.getSelectedRow(), 2).toString());
+				txfNombre.setText(model.getValueAt(tblEdificios.getSelectedRow(),
+						0).toString());
+				txfPais.setText(model.getValueAt(
+						tblEdificios.getSelectedRow(), 1).toString());
+				txfCiudad.setText(model.getValueAt(
+						tblEdificios.getSelectedRow(), 2).toString());
 
 			}
 		});
-		tblUsuario.setModel(new DefaultTableModel(new Object[][] {},
-				new String[] { "Nick", "Nombre", "Apellidos" }));
-		tblUsuario.getColumnModel().getColumn(0).setPreferredWidth(60);
-		scrollPane.setViewportView(tblUsuario);
+		tblEdificios.setModel(new DefaultTableModel(new Object[][] {},
+				new String[] { "Nombre", "Pais", "Ciudad", "Arquitecto",
+						"Localizacion" }));
+		tblEdificios.getColumnModel().getColumn(0).setPreferredWidth(60);
+		scrollPane.setViewportView(tblEdificios);
 		getFrmWelcome().getContentPane().setLayout(null);
 		getFrmWelcome().getContentPane().add(scrollPane);
 
@@ -88,11 +97,11 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 		btnAlta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				lblMensaje.setText("");
-				DefaultTableModel model = (DefaultTableModel) tblUsuario
+				DefaultTableModel model = (DefaultTableModel) tblEdificios
 						.getModel();
-				if (!txfNick.getText().trim().equals("")) {
-					model.addRow(new Object[] { txfNick.getText(),
-							txfNombre.getText(), txfApellidos.getText() });
+				if (!txfNombre.getText().trim().equals("")) {
+					model.addRow(new Object[] { txfNombre.getText(),
+							txfPais.getText(), txfCiudad.getText() });
 				} else {
 					lblMensaje.setText("El campo nombre no puede estar vacio");
 				}
@@ -106,11 +115,11 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 		btnBaja = new JButton("Baja");
 		btnBaja.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				DefaultTableModel model = (DefaultTableModel) tblUsuario
+				DefaultTableModel model = (DefaultTableModel) tblEdificios
 						.getModel();
-				int fila_selected = tblUsuario.getSelectedRow();
-				if (tblUsuario.getSelectedRow() == -1) {
-					if (tblUsuario.getRowCount() == 0) {
+				int fila_selected = tblEdificios.getSelectedRow();
+				if (tblEdificios.getSelectedRow() == -1) {
+					if (tblEdificios.getRowCount() == 0) {
 						lblMensaje.setText("La tabla está vacia");
 					} else {
 						lblMensaje
@@ -131,22 +140,22 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 		btnModificacion.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				lblMensaje.setText("");
-				DefaultTableModel model = (DefaultTableModel) tblUsuario
+				DefaultTableModel model = (DefaultTableModel) tblEdificios
 						.getModel();
-				if (tblUsuario.getSelectedRow() == -1) {
-					if (tblUsuario.getRowCount() == 0) {
+				if (tblEdificios.getSelectedRow() == -1) {
+					if (tblEdificios.getRowCount() == 0) {
 						lblMensaje.setText("La tabla está vacia");
 					} else {
 						lblMensaje
 								.setText("Seleccione algún registro primero para modificarlo");
 					}
 				}
-				model.setValueAt(txfNick.getText(),
-						tblUsuario.getSelectedRow(), 0);
 				model.setValueAt(txfNombre.getText(),
-						tblUsuario.getSelectedRow(), 1);
-				model.setValueAt(txfApellidos.getText(),
-						tblUsuario.getSelectedRow(), 2);
+						tblEdificios.getSelectedRow(), 0);
+				model.setValueAt(txfPais.getText(),
+						tblEdificios.getSelectedRow(), 1);
+				model.setValueAt(txfCiudad.getText(),
+						tblEdificios.getSelectedRow(), 2);
 			}
 		});
 
@@ -165,37 +174,55 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 		getFrmWelcome().getContentPane().add(btnSalir);
 
 		// Etiequetas y cuadros de Texto
-		txfNick = new JTextField();
-		txfNick.setBounds(90, 347, 207, 33);
-		getFrmWelcome().getContentPane().add(txfNick);
-		txfNick.setColumns(10);
-
 		txfNombre = new JTextField();
-		txfNombre.setColumns(10);
-		txfNombre.setBounds(303, 347, 207, 33);
+		txfNombre.setBounds(90, 347, 112, 33);
 		getFrmWelcome().getContentPane().add(txfNombre);
+		txfNombre.setColumns(10);
 
-		txfApellidos = new JTextField();
-		txfApellidos.setColumns(10);
-		txfApellidos.setBounds(516, 347, 207, 33);
-		getFrmWelcome().getContentPane().add(txfApellidos);
+		txfPais = new JTextField();
+		txfPais.setColumns(10);
+		txfPais.setBounds(212, 347, 112, 33);
+		getFrmWelcome().getContentPane().add(txfPais);
 
-		JLabel lblNewLabel = new JLabel("Nick");
-		lblNewLabel.setBounds(90, 322, 56, 16);
-		getFrmWelcome().getContentPane().add(lblNewLabel);
+		txfCiudad = new JTextField();
+		txfCiudad.setColumns(10);
+		txfCiudad.setBounds(334, 347, 112, 33);
+		getFrmWelcome().getContentPane().add(txfCiudad);
 
-		JLabel lblNombre = new JLabel("Nombre");
-		lblNombre.setBounds(303, 322, 56, 16);
+		lblNombre = new JLabel("Nombre");
+		lblNombre.setBounds(90, 322, 56, 16);
 		getFrmWelcome().getContentPane().add(lblNombre);
 
-		JLabel lblApellidos = new JLabel("Apellidos");
-		lblApellidos.setBounds(516, 322, 56, 16);
-		getFrmWelcome().getContentPane().add(lblApellidos);
+		lblPais = new JLabel("Pais");
+		lblPais.setBounds(212, 322, 56, 16);
+		getFrmWelcome().getContentPane().add(lblPais);
+
+		lblCiudad = new JLabel("Ciudad");
+		lblCiudad.setBounds(334, 322, 56, 16);
+		getFrmWelcome().getContentPane().add(lblCiudad);
 
 		lblMensaje = new JLabel("");
 		lblMensaje.setForeground(Color.RED);
 		lblMensaje.setBounds(90, 266, 633, 40);
 		getFrmWelcome().getContentPane().add(lblMensaje);
+		
+		txfArquitecto = new JTextField();
+		txfArquitecto.setBounds(456, 347, 112, 33);
+		frmWelcome.getContentPane().add(txfArquitecto);
+		txfArquitecto.setColumns(10);
+		
+		lblArquitecto = new JLabel("Arquitecto");
+		lblArquitecto.setBounds(456, 323, 81, 14);
+		frmWelcome.getContentPane().add(lblArquitecto);
+		
+		textField = new JTextField();
+		textField.setBounds(578, 347, 112, 33);
+		frmWelcome.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		lblLocalizacion = new JLabel("Localizacion");
+		lblLocalizacion.setBounds(578, 323, 112, 14);
+		frmWelcome.getContentPane().add(lblLocalizacion);
 	}
 
 	public JFrame getFrmWelcome() {
@@ -219,4 +246,10 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 		this.modelo = modelo;
 	}
 
+	/**
+	 * @return the tblEdificios
+	 */
+	public JTable getTblEdificios() {
+		return tblEdificios;
+	}
 }
