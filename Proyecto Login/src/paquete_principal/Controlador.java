@@ -107,6 +107,8 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 	public void cambiar_LblError_registro() {
 		if (!this.modelo.comprobar_password_registro()) {
 			this.Registro.setLblErrores("Las contraseñas no coinciden");
+		}else{
+			
 		}
 
 	}

@@ -48,6 +48,14 @@ public interface Int_Modelo {
 
 	public boolean comprobar_correo_registro();
 
+	/**
+	 * Metodo que comprueba si es que se ha ingresado algo en el campo Nombre
+	 * del registro. Comprueba que la longitud coincide con el maximo permitido
+	 * de la tabla Usuarios regitrados
+	 * 
+	 * @return True si la longitud es estrictamente mayor que cero y
+	 *         estrictamente menor que 100. Falso en caso contrario.
+	 */
 	public boolean comprobar_ingreso_nombre();
 
 	public boolean comprobar_ingreso_usuario();
