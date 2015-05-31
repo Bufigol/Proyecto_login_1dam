@@ -240,6 +240,15 @@ public class Modelo implements Int_Modelo {
 
 	}
 
+	public boolean comprobar_password_longitud() {
+		int longitud = this.password_registro.length();
+		if ((longitud < 8) && (longitud > 60)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	@Override
 	public void registrar_usuario_tabla() {
 		String procedimiento = "{call PROYECTO_LOGIN.INSERTADO_DATOS_REGISTRO (?,?,?,?)}";

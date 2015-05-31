@@ -107,8 +107,23 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 	public void cambiar_LblError_registro() {
 		if (!this.modelo.comprobar_password_registro()) {
 			this.Registro.setLblErrores("Las contraseñas no coinciden");
-		}else{
-			
+		} else {
+			if (this.modelo.comprobar_password_longitud()) {
+
+			} else {
+				if (!this.modelo.comprobar_ingreso_nombre()) {
+					if (this.modelo.getNombre_registro().length() == 0) {
+						this.Registro.setLblErrores("Debe ingresar un nombre");
+					}
+					if (this.modelo.getNombre_registro().length() > 100) {
+						this.Registro
+								.setLblErrores("El nombre ingresado es demasiado largo");
+					}
+				} else {
+
+				}
+			}
+
 		}
 
 	}

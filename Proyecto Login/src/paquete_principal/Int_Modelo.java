@@ -46,6 +46,15 @@ public interface Int_Modelo {
 	 */
 	public boolean comprobar_password_registro();
 
+	/**
+	 * Metodo que comprueba la longitud de la contraseña ingresada. Se espera
+	 * que tenga como minimo 8 caracteres y como maximo 60 caracteres
+	 * 
+	 * @return Verdadero si la longitud de la contraseña no esta en el rango y
+	 *         falso si la contraseña es de la longitud deseada.
+	 */
+	public boolean comprobar_password_longitud();
+
 	public boolean comprobar_correo_registro();
 
 	/**
