@@ -233,7 +233,9 @@ public class Modelo implements Int_Modelo {
 	public boolean comprobar_Pasword_login() {
 		String usuario = this.login.getUsuario();
 		String password = this.login.getPassword();
-		if (this.listaUsuarios.get(usuario).toString().equals(password)) {
+
+		if (this.listaUsuarios.get(usuario).toString().equals(password)
+				&& (usuario.length() > 0) && (password.length() > 0)) {
 			return true;
 		} else {
 			return false;

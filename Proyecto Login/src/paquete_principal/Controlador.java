@@ -196,6 +196,7 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 
 	public void Bienvenido_A_Inicio() {
 		this.Bienvenida.setVisible(false);
+		this.Bienvenida.getFrmWelcome().setVisible(false);
 		this.LogIn.setVisible(true);
 	}
 

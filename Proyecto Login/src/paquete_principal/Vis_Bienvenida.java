@@ -47,6 +47,7 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 	private JTextField txfLocalizacion;
 	private JLabel lblLocalizacion;
 	private String NombreAntiguo;
+	private JButton btnCerrarSesion;
 
 	/**
 	 * Create the application.
@@ -88,7 +89,7 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 						tblEdificios.getSelectedRow(), 3).toString());
 				txfLocalizacion.setText(model.getValueAt(
 						tblEdificios.getSelectedRow(), 3).toString());
-				
+
 			}
 		});
 		tblEdificios.setModel(new DefaultTableModel(new Object[][] {},
@@ -98,7 +99,6 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 		scrollPane.setViewportView(tblEdificios);
 		getFrmWelcome().getContentPane().setLayout(null);
 		getFrmWelcome().getContentPane().add(scrollPane);
-		
 
 		// Btn ALTA
 
@@ -238,6 +238,15 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 		lblLocalizacion = new JLabel("Localizacion");
 		lblLocalizacion.setBounds(578, 323, 112, 14);
 		frmWelcome.getContentPane().add(lblLocalizacion);
+
+		btnCerrarSesion = new JButton("Cerrar Sesion");
+		btnCerrarSesion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				controlador.Bienvenido_A_Inicio();
+			}
+		});
+		btnCerrarSesion.setBounds(494, 479, 125, 50);
+		frmWelcome.getContentPane().add(btnCerrarSesion);
 	}
 
 	public JFrame getFrmWelcome() {
