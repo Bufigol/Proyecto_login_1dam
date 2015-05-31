@@ -41,5 +41,10 @@ public interface Int_Controlador {
 
 	public boolean registrar_nuevo_usuario();
 
-
+	/**
+	 * Metodo que hace comprobaciones de la constraseña del registro.
+	 * 
+	 * @return
+	 */
+	public String comprobaciones_contraseña();
 }

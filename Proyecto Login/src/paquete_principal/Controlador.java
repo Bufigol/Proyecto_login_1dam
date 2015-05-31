@@ -139,11 +139,22 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 								this.Registro
 										.setLblErrores("El nombre de usuario ingresado es demasiado largo");
 							}
+						} else {
+							if (!this.modelo.comprobar_correo_registro()) {
+								this.Registro
+										.setLblErrores("El e-mail no ha sido ingresado correctamente");
+							}
 						}
 					}
 				}
 			}
 		}
+	}
+
+	@Override
+	public String comprobaciones_contraseña() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

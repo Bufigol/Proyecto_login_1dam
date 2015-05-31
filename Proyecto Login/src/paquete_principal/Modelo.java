@@ -372,4 +372,15 @@ public class Modelo implements Int_Modelo {
 			return false;
 		}
 	}
+
+	@Override
+	public boolean comprobacion_completa_password_registro() {
+		// TODO Auto-generated method stub
+		if (comprobar_password_registro() && comprobar_password_longitud()) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
 }

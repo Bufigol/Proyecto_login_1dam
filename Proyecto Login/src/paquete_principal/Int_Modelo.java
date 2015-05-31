@@ -55,6 +55,14 @@ public interface Int_Modelo {
 	 */
 	public boolean comprobar_password_longitud();
 
+	/**
+	 * Metodo que comprueba que se ha ingresado bien la constraseña y es de la
+	 * longitud adecuada.
+	 * 
+	 * @return true si esta todo correcto y false si hay algun error.
+	 */
+	public boolean comprobacion_completa_password_registro();
+
 	public boolean comprobar_correo_registro();
 
 	/**
