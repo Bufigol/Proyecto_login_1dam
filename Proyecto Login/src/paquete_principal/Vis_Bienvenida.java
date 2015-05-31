@@ -49,7 +49,6 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 	private JTextField txfLocalizacion;
 	private JLabel lblLocalizacion;
 	private String NombreAntiguo;
-	private ResultSet datosEdificios;
 
 	/**
 	 * Create the application.
@@ -60,7 +59,7 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 	}
 
 	public void integrar_datos_tabla() {
-		datosEdificios = this.modelo.getResultadosEdificios();
+		ResultSet datosEdificios = this.modelo.getResultadosEdificios();
 		try {
 			while (datosEdificios.next()) {
 				tblEdificios.add(
