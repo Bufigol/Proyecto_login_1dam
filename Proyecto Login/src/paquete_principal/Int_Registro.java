@@ -22,7 +22,6 @@ public interface Int_Registro {
 	 * @param mensaje
 	 *            Parametro que guarda el mensaje a mostrar al usuario.
 	 */
-	public void setLblErrores(String mensaje);
 
 	public String getTxF_Usuario();
 
@@ -32,4 +31,11 @@ public interface Int_Registro {
 
 	public String getTxF_Correo();
 
+	public void setLblErroresPassword(String lblErroresPassword);
+
+	public void setLblErroresCorreo(String lblErroresCorreo);
+
+	public void setLblErroresUsuario(String lblErroresUsuario);
+
+	public void setLblErroresNombre(String lblErroresNombre);
 }

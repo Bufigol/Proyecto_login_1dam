@@ -263,7 +263,33 @@ public class Vis_Registro extends JFrame implements Int_Registro {
 		this.controlador = controlador;
 	}
 
-	public void setLblErrores(String mensaje) {
-		this.lblErrores.setText(mensaje);
+	/**
+	 * @param lblErroresNombre the lblErroresNombre to set
+	 */
+	public void setLblErroresNombre(String lblErroresNombre) {
+		this.lblErroresNombre.setText(lblErroresNombre);
 	}
+
+	/**
+	 * @param lblErroresUsuario the lblErroresUsuario to set
+	 */
+	public void setLblErroresUsuario(String lblErroresUsuario) {
+		this.lblErroresUsuario.setText(lblErroresUsuario);
+	}
+
+	/**
+	 * @param lblErroresCorreo the lblErroresCorreo to set
+	 */
+	public void setLblErroresCorreo(String lblErroresCorreo) {
+		this.lblErroresCorreo.setText(lblErroresCorreo);
+	}
+
+	/**
+	 * @param lblErroresPassword the lblErroresPassword to set
+	 */
+	public void setLblErroresPassword(String lblErroresPassword) {
+		this.lblErroresPassword.setText(lblErroresPassword); 
+	}
+
+	
 }
