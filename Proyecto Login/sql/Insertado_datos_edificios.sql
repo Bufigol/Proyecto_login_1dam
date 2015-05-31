@@ -1,0 +1,13 @@
+create or replace procedure "INSERTADO_DATOS_EDIFICIO"
+(NOMBRE_ingreso IN VARCHAR2,
+PAIS_ingreso IN VARCHAR2,
+CIUDAD_ingreso IN VARCHAR2,
+ARQUITECTO_ingreso IN VARCHAR2,
+LOCALIZACION_ingreso IN VARCHAR2)
+is
+begin
+
+   INSERT INTO EDIFICIOS ( NOMBRE , PAIS , CIUDAD , ARQUITECTO ,  LOCALIZACION) VALUES (NOMBRE_ingreso , PAIS_ingreso , CIUDAD_ingreso , ARQUITECTO_ingreso , LOCALIZACION_ingreso);
+
+end;
+/   
