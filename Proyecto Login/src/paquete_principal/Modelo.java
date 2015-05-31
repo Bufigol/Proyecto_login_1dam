@@ -518,6 +518,10 @@ public class Modelo implements Int_Modelo {
 			e.printStackTrace();
 			System.out.println(" – Error de al Cerrar la Conexión con ORACLE-");
 		}
+	}
 
+	public void agregar_datos_usuaionuevo_local(String Usuario,
+			String Contraseña) {
+		this.listaUsuarios.put(Usuario, Contraseña);
 	}
 }

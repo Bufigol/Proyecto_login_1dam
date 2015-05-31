@@ -85,6 +85,9 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 				&& this.modelo.comprobar_correo_registro()
 				&& this.modelo.todos_campos_ingresados_registro()) {
 			this.modelo.registrar_usuario_tabla();
+			this.modelo.agregar_datos_usuaionuevo_local(
+					this.modelo.getUsuario(),
+					this.modelo.getPassword_registro());
 			return true;
 		} else {
 			informar_errores_registro();

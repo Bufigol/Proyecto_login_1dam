@@ -109,5 +109,8 @@ public interface Int_Modelo {
 
 	public void agregar_datos_tabla();
 
+	public void agregar_datos_usuaionuevo_local(String Usuario,
+			String Contraseña);
+
 	public void Cerrarconexion();
 }
