@@ -174,7 +174,10 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 	}
 
 	public void nuevo_registro_edificio() {
-
+		this.modelo.insertar_dato_edificio(this.Bienvenida.getTxfNombre(),
+				this.Bienvenida.getTxfPais(), this.Bienvenida.getTxfCiudad(),
+				this.Bienvenida.getTxfArquitecto(),
+				this.Bienvenida.getTxfLocalizacion());
 	}
 
 }
