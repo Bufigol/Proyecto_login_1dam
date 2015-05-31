@@ -108,7 +108,8 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 						.getModel();
 				if (!txfNombre.getText().trim().equals("")) {
 					model.addRow(new Object[] { txfNombre.getText(),
-							txfPais.getText(), txfCiudad.getText() });
+							txfPais.getText(), txfCiudad.getText(),
+							txfArquitecto.getText(), txfLocalizacion.getText() });
 					controlador.nuevo_registro_edificio();
 				} else {
 					lblMensaje.setText("El campo nombre no puede estar vacio");

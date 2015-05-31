@@ -410,7 +410,7 @@ public class Modelo implements Int_Modelo {
 	public void insertado_datos_edificios_local(ResultSet entrada) {
 		try {
 			while (entrada.next()) {
-;
+				;
 			}
 
 		} catch (SQLException e) {
@@ -469,7 +469,7 @@ public class Modelo implements Int_Modelo {
 			insertado.setString(2, PAIS_ingreso);
 			insertado.setString(3, CIUDAD_ingreso);
 			insertado.setString(4, ARQUITECTO_ingreso);
-			insertado.setString(4, LOCALIZACION_ingreso);
+			insertado.setString(5, LOCALIZACION_ingreso);
 			insertado.execute();
 			insertado.close();
 		} catch (SQLException e) {
