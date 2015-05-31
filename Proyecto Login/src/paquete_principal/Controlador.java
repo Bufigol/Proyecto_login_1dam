@@ -180,4 +180,17 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 				this.Bienvenida.getTxfLocalizacion());
 	}
 
+	public void baja_edificio() {
+		this.modelo.borrar_dato_edificio(this.Bienvenida.getTxfNombre());
+	}
+
+	public void actualizacion_edificio() {
+		this.modelo.actualizar_dato_edificio(
+				this.Bienvenida.getNombreAntiguo(),
+				this.Bienvenida.getTxfNombre(), this.Bienvenida.getTxfPais(),
+				this.Bienvenida.getTxfCiudad(),
+				this.Bienvenida.getTxfArquitecto(),
+				this.Bienvenida.getTxfLocalizacion());
+	}
+
 }

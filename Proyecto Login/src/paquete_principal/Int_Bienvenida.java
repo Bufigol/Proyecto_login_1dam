@@ -16,4 +16,6 @@ public interface Int_Bienvenida {
 	public String getTxfArquitecto();
 
 	public String getTxfLocalizacion();
+
+	public String getNombreAntiguo();
 }

@@ -46,6 +46,7 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 	private JLabel lblArquitecto;
 	private JTextField txfLocalizacion;
 	private JLabel lblLocalizacion;
+	private String NombreAntiguo;
 
 	/**
 	 * Create the application.
@@ -74,12 +75,18 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 
 				DefaultTableModel model = (DefaultTableModel) tblEdificios
 						.getModel();
+				NombreAntiguo = model.getValueAt(tblEdificios.getSelectedRow(),
+						0).toString();
 				txfNombre.setText(model.getValueAt(
 						tblEdificios.getSelectedRow(), 0).toString());
 				txfPais.setText(model.getValueAt(tblEdificios.getSelectedRow(),
 						1).toString());
 				txfCiudad.setText(model.getValueAt(
 						tblEdificios.getSelectedRow(), 2).toString());
+				txfArquitecto.setText(model.getValueAt(
+						tblEdificios.getSelectedRow(), 3).toString());
+				txfLocalizacion.setText(model.getValueAt(
+						tblEdificios.getSelectedRow(), 3).toString());
 
 			}
 		});
@@ -102,6 +109,7 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 				if (!txfNombre.getText().trim().equals("")) {
 					model.addRow(new Object[] { txfNombre.getText(),
 							txfPais.getText(), txfCiudad.getText() });
+					controlador.nuevo_registro_edificio();
 				} else {
 					lblMensaje.setText("El campo nombre no puede estar vacio");
 				}
@@ -127,7 +135,7 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 					}
 				} else {
 					model.removeRow(fila_selected);
-
+					controlador.baja_edificio();
 				}
 
 			}
@@ -156,6 +164,11 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 						tblEdificios.getSelectedRow(), 1);
 				model.setValueAt(txfCiudad.getText(),
 						tblEdificios.getSelectedRow(), 2);
+				model.setValueAt(txfArquitecto.getText(),
+						tblEdificios.getSelectedRow(), 3);
+				model.setValueAt(txfLocalizacion.getText(),
+						tblEdificios.getSelectedRow(), 4);
+				controlador.baja_edificio();
 			}
 		});
 
@@ -286,5 +299,9 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 	 */
 	public String getTxfLocalizacion() {
 		return txfLocalizacion.getText();
+	}
+
+	public String getNombreAntiguo() {
+		return this.NombreAntiguo;
 	}
 }

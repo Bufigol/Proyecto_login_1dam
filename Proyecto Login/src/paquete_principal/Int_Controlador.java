@@ -45,8 +45,14 @@ public interface Int_Controlador {
 
 	public void nuevo_registro_edificio();
 
+	public void baja_edificio();
+
+	public void actualizacion_edificio();
+
 	public boolean iniciar_sesion_login();
 
 	public boolean registrar_nuevo_usuario();
+
+	
 
 }
