@@ -107,5 +107,7 @@ public interface Int_Modelo {
 
 	public void borrar_dato_edificio(String NOMBRE_ORIGINAL);
 
+	public void agregar_datos_tabla();
+
 	public void Cerrarconexion();
 }

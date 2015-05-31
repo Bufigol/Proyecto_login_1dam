@@ -88,7 +88,7 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 						tblEdificios.getSelectedRow(), 3).toString());
 				txfLocalizacion.setText(model.getValueAt(
 						tblEdificios.getSelectedRow(), 3).toString());
-
+				
 			}
 		});
 		tblEdificios.setModel(new DefaultTableModel(new Object[][] {},
@@ -98,6 +98,7 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 		scrollPane.setViewportView(tblEdificios);
 		getFrmWelcome().getContentPane().setLayout(null);
 		getFrmWelcome().getContentPane().add(scrollPane);
+		
 
 		// Btn ALTA
 

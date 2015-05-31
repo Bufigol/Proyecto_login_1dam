@@ -30,7 +30,6 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 	public boolean iniciar_sesion_login() {
 		// TODO Auto-generated method stub
 		if (this.modelo.comprobar_Pasword_login()) {
-			this.Bienvenida.integrar_datos_tabla();
 			return true;
 		} else {
 			return false;
@@ -40,7 +39,6 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 	public void LogIn_A_Bienvenido() {
 		this.LogIn.setVisible(false);
 		this.Bienvenida.getFrmWelcome().setVisible(true);
-		this.Bienvenida.integrar_datos_tabla();
 	}
 
 	/**
@@ -61,7 +59,6 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 		this.Registro.setVisible(false);
 		this.Bienvenida.setVisible(true);
 		this.Bienvenida.getFrmWelcome().setVisible(true);
-		this.Bienvenida.integrar_datos_tabla();
 	}
 
 	/**

@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.swing.table.DefaultTableModel;
+
 public class Modelo implements Int_Modelo {
 	private Vis_Bienvenida bienvenida;
 	private Vis_Login login;
@@ -19,7 +21,6 @@ public class Modelo implements Int_Modelo {
 	private String mail_registro;
 	// Listas para el trabajo de datos de manera local
 	private Map<String, String> listaUsuarios;
-
 
 	// Conexion con la base de datos
 	private String url_conexion_BD;
@@ -46,7 +47,8 @@ public class Modelo implements Int_Modelo {
 		conexion_BD(usuario_BD, password_BD);
 		this.listaUsuarios = new HashMap<String, String>();
 		importar_usuarios_y_passwords();
-		SeleccTodosEdificios();
+		agregar_datos_tabla();
+
 	}
 
 	public void conexion_BD(String Usuario, String password) {
@@ -393,8 +395,6 @@ public class Modelo implements Int_Modelo {
 
 	// mostrar registros de la tabla Edificios
 
-
-
 	@Override
 	public boolean todos_campos_ingresados_registro() {
 		int longitud_usuario = this.usuario.length();
@@ -487,6 +487,25 @@ public class Modelo implements Int_Modelo {
 			borrado.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}
+	}
+
+	public void agregar_datos_tabla() {
+		try {
+			DefaultTableModel model = (DefaultTableModel) this.bienvenida
+					.getTblEdificios().getModel();
+			Statement stmt = conexion_BD.createStatement();
+			ResultSet resultados = stmt
+					.executeQuery("SELECT * FROM PROYECTO_LOGIN.EDIFICIOS");
+			while (resultados.next()) {
+				model.addRow(new Object[] { resultados.getString(1),
+						resultados.getString(2), resultados.getString(3),
+						resultados.getString(4), resultados.getString(5) });
+			}
+			resultados.close();
+			stmt.close();
+		} catch (SQLException s) {
+			s.printStackTrace();
 		}
 	}
 
