@@ -40,4 +40,6 @@ public interface Int_Controlador {
 	public boolean iniciar_sesion_login();
 
 	public boolean registrar_nuevo_usuario();
+
+
 }

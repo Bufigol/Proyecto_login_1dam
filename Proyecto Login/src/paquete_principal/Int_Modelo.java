@@ -70,6 +70,23 @@ public interface Int_Modelo {
 	public boolean comprobar_ingreso_usuario();
 
 	/**
+	 * Metodo que comprueba la longitud de lo ingresado en el campo Usuario del
+	 * registro.
+	 * 
+	 * @return True si se ha ingresado algo y su longitud es menor o igual que
+	 *         30. Falso en caso contrario.
+	 */
+	public boolean comprobar_longitud_Usuario();
+
+	/**
+	 * Metodo que comprueba que se han ingresado todos los campos en el registro
+	 * 
+	 * @return True si se han ingresado todos los campos y false si falta al
+	 *         menos un campo por ingresar.
+	 */
+	public boolean todos_campos_ingresados_registro();
+
+	/**
 	 * Metodo para la obtención de los datos alojados en la base de datos en la
 	 * tabla "EDIFICIOS", para que de esta manera se pueda hacer alta,baja y
 	 * modificación de datos en la misma

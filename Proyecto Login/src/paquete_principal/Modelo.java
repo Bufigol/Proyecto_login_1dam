@@ -249,6 +249,15 @@ public class Modelo implements Int_Modelo {
 		}
 	}
 
+	public boolean comprobar_longitud_Usuario() {
+		int longitud = this.usuario.length();
+		if ((longitud > 0) && (longitud <= 30)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
 	@Override
 	public void registrar_usuario_tabla() {
 		String procedimiento = "{call PROYECTO_LOGIN.INSERTADO_DATOS_REGISTRO (?,?,?,?)}";
@@ -344,6 +353,17 @@ public class Modelo implements Int_Modelo {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public boolean todos_campos_ingresados_registro() {
+		int longitud_usuario = this.usuario.length();
+		int longitud_nombre = this.nombre_registro.length();
+		if ((longitud_usuario > 0) && (longitud_nombre > 0)) {
+			return true;
+		} else {
+			return false;
 		}
 	}
 }

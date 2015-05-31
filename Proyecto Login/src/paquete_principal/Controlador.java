@@ -82,7 +82,8 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 		set_Datos_en_modelo();
 		if (this.modelo.comprobar_password_registro()
 				&& this.modelo.comprobar_ingreso_nombre()
-				&& this.modelo.comprobar_ingreso_usuario()) {
+				&& this.modelo.comprobar_ingreso_usuario()
+				&& this.modelo.todos_campos_ingresados_registro()) {
 			this.modelo.registrar_usuario_tabla();
 			return true;
 		} else {
@@ -105,33 +106,44 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 	}
 
 	public void cambiar_LblError_registro() {
-		if (!this.modelo.comprobar_password_registro()) {
-			this.Registro.setLblErrores("Las contraseñas no coinciden");
-		} else {
-			if (this.modelo.comprobar_password_longitud()) {
-				if (this.modelo.getPassword_registro().length() < 8) {
-					this.Registro
-							.setLblErrores("La contraseña es demasiado corta");
-				}
-				if (this.modelo.getPassword_registro().length() > 60) {
-					this.Registro
-							.setLblErrores("La contraseña es demasiado larga");
-				}
+		if (!this.modelo.todos_campos_ingresados_registro()) {
+			if (!this.modelo.comprobar_password_registro()) {
+				this.Registro.setLblErrores("Las contraseñas no coinciden");
 			} else {
-				if (!this.modelo.comprobar_ingreso_nombre()) {
-					if (this.modelo.getNombre_registro().length() == 0) {
-						this.Registro.setLblErrores("Debe ingresar un nombre");
-					}
-					if (this.modelo.getNombre_registro().length() > 100) {
+				if (this.modelo.comprobar_password_longitud()) {
+					if (this.modelo.getPassword_registro().length() < 8) {
 						this.Registro
-								.setLblErrores("El nombre ingresado es demasiado largo");
+								.setLblErrores("La contraseña es demasiado corta");
+					}
+					if (this.modelo.getPassword_registro().length() > 60) {
+						this.Registro
+								.setLblErrores("La contraseña es demasiado larga");
 					}
 				} else {
-
+					if (!this.modelo.comprobar_ingreso_nombre()) {
+						if (this.modelo.getNombre_registro().length() == 0) {
+							this.Registro
+									.setLblErrores("Debe ingresar un nombre");
+						}
+						if (this.modelo.getNombre_registro().length() > 100) {
+							this.Registro
+									.setLblErrores("El nombre ingresado es demasiado largo");
+						}
+					} else {
+						if (!this.modelo.comprobar_longitud_Usuario()) {
+							if (this.modelo.getUsuario().length() == 0) {
+								this.Registro
+										.setLblErrores("Debe ingresar un nombre de Usuario");
+							}
+							if (this.modelo.getNombre_registro().length() > 30) {
+								this.Registro
+										.setLblErrores("El nombre de usuario ingresado es demasiado largo");
+							}
+						}
+					}
 				}
 			}
-
 		}
-
 	}
+
 }
