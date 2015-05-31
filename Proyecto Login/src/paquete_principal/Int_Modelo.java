@@ -117,4 +117,14 @@ public interface Int_Modelo {
 	 */
 	public void SeleccTodosEdificios();
 
+	public void insertar_dato_edificio(String NOMBRE_ingreso,
+			String PAIS_ingreso, String CIUDAD_ingreso,
+			String ARQUITECTO_ingreso, String LOCALIZACION_ingreso);
+
+	public void actualizar_dato_edificio(String NOMBRE_ORIGINAL,
+			String NOMBRE_ingreso, String PAIS_ingreso, String CIUDAD_ingreso,
+			String ARQUITECTO_ingreso, String LOCALIZACION_ingreso);
+
+	public void borrar_dato_edificio(String NOMBRE_ORIGINAL);
+
 }
