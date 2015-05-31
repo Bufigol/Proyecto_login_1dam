@@ -32,6 +32,7 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 		if (this.modelo.comprobar_Pasword_login()) {
 			return true;
 		} else {
+			this.LogIn.getLblErrores().setText("Datos erronenos.");
 			return false;
 		}
 	}

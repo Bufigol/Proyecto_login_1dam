@@ -79,7 +79,9 @@ public class Vis_Login extends JFrame implements Int_Login {
 		btnLogIn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("Prueba de etrada a login");
-				if (controlador.iniciar_sesion_login()) {
+				if (controlador.iniciar_sesion_login()
+						&& (pswIngresoPassword.getText().length() > 0)
+						&& (txtIngresoUsuario.getText().length() > 0)) {
 					controlador.LogIn_A_Bienvenido();
 				} else {
 					lblErrores.setText("Error");
@@ -225,5 +227,9 @@ public class Vis_Login extends JFrame implements Int_Login {
 	public String getPassword() {
 		// TODO Auto-generated method stub
 		return this.pswIngresoPassword.getText().toString();
+	}
+
+	public JLabel getLblErrores() {
+		return this.lblErrores;
 	}
 }

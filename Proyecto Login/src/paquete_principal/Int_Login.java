@@ -5,6 +5,8 @@
  */
 package paquete_principal;
 
+import javax.swing.JLabel;
+
 /**
  *
  * @author 21414215
@@ -19,4 +21,5 @@ public interface Int_Login {
 
 	public String getPassword();
 
+	public JLabel getLblErrores();
 }
