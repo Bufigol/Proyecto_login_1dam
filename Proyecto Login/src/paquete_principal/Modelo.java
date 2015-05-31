@@ -493,6 +493,14 @@ public class Modelo implements Int_Modelo {
 	@Override
 	public void borrar_dato_edificio(String NOMBRE_ORIGINAL) {
 		// TODO Auto-generated method stub
-
+		String procedimiento = "{call PROYECTO_LOGIN.BORRAR_EDIFICIO (?)}";
+		try {
+			CallableStatement borrado = conexion_BD.prepareCall(procedimiento);
+			borrado.setString(1, NOMBRE_ORIGINAL);
+			borrado.execute();
+			borrado.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 }
