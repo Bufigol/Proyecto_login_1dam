@@ -110,8 +110,10 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 			// comprobaciones de contraseña
 			if (!this.modelo.comprobacion_completa_password_registro()) {
 				this.Registro.setLblErrores(comprobaciones_contraseña());
-			}else{
-				if(this.modelo.)
+			} else {
+				if (!this.modelo.comprobacion_completa_usuario()) {
+					this.Registro.setLblErrores(comprobaciones_usuario());
+				}
 			}
 		}
 
@@ -125,6 +127,20 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 		} else {
 			if (modelo.comprobar_password_longitud()) {
 				return "La contraseña debe ser mayor a 8 caracteres y menor que 30";
+			} else {
+				return null;
+			}
+		}
+
+	}
+
+	@Override
+	public String comprobaciones_usuario() {
+		if (!this.modelo.comprobar_longitud_Usuario()) {
+			return "El nombre de usuaio debe ser de una longitud de entre 1 y 30 caracteres";
+		} else {
+			if (!this.modelo.comprobar_ingreso_usuario()) {
+				return "Ese nombre de usuario ya esta registrado";
 			} else {
 				return null;
 			}

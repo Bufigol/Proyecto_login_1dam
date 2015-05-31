@@ -47,4 +47,11 @@ public interface Int_Controlador {
 	 * @return
 	 */
 	public String comprobaciones_contraseña();
+
+	/**
+	 * Metodo que hace comprobaciones del campo usuario del registro.
+	 * 
+	 * @return
+	 */
+	public String comprobaciones_usuario();
 }

@@ -386,7 +386,7 @@ public class Modelo implements Int_Modelo {
 
 	@Override
 	public boolean comprobacion_completa_usuario() {
-		if (!comprobar_ingreso_usuario() && !comprobar_longitud_Usuario()) {
+		if (comprobar_ingreso_usuario() && comprobar_longitud_Usuario()) {
 			return true;
 		} else {
 			return false;

@@ -67,7 +67,7 @@ public interface Int_Modelo {
 	 * Metodo para comprobar errores en el ingreso de datos del campo usuario en
 	 * el registro.
 	 * 
-	 * @return True si existe algun error y false si esta todo corretco.
+	 * @return True esta todo correcto y false si hay algun error.
 	 */
 	public boolean comprobacion_completa_usuario();
 
