@@ -23,8 +23,6 @@ import javax.swing.JLabel;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 
@@ -56,24 +54,6 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 	public Vis_Bienvenida() {
 		initialize();
 
-	}
-
-	public void integrar_datos_tabla() {
-		ResultSet datosEdificios = this.modelo.getResultadosEdificios();
-		try {
-			while (datosEdificios.next()) {
-				tblEdificios.add(
-						tblEdificios,
-						new Object[] { datosEdificios.getString(1),
-								datosEdificios.getString(2),
-								datosEdificios.getString(3),
-								datosEdificios.getString(4),
-								datosEdificios.getString(5) });
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 
 	/**
@@ -201,8 +181,7 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 		btnSalir = new JButton("Salir");
 		btnSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				System.exit(0);
-
+				controlador.Cerrar();
 			}
 		});
 		btnSalir.setBounds(629, 479, 125, 50);

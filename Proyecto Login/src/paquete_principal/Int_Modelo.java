@@ -97,15 +97,6 @@ public interface Int_Modelo {
 	 */
 	public boolean todos_campos_ingresados_registro();
 
-	/**
-	 * Metodo para la obtención de los datos alojados en la base de datos en la
-	 * tabla "EDIFICIOS", para que de esta manera se pueda hacer alta,baja y
-	 * modificación de datos en la misma
-	 * 
-	 * @return
-	 */
-	public void SeleccTodosEdificios();
-
 	public void insertar_dato_edificio(String NOMBRE_ingreso,
 			String PAIS_ingreso, String CIUDAD_ingreso,
 			String ARQUITECTO_ingreso, String LOCALIZACION_ingreso);
@@ -115,8 +106,6 @@ public interface Int_Modelo {
 			String ARQUITECTO_ingreso, String LOCALIZACION_ingreso);
 
 	public void borrar_dato_edificio(String NOMBRE_ORIGINAL);
-
-	public ResultSet getResultadosEdificios();
 
 	public void Cerrarconexion();
 }
