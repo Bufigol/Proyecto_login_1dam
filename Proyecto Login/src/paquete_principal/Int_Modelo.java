@@ -118,4 +118,5 @@ public interface Int_Modelo {
 
 	public ResultSet getResultadosEdificios();
 
+	public void Cerrarconexion();
 }

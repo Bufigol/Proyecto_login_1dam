@@ -506,4 +506,16 @@ public class Modelo implements Int_Modelo {
 	public ResultSet getResultadosEdificios() {
 		return this.datosEdificios;
 	}
+
+	public void Cerrarconexion() {
+		try {
+			conexion_BD.close();
+			System.out.println(" - Conexión con ORACLE CERRADA -");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println(" – Error de al Cerrar la Conexión con ORACLE-");
+		}
+
+	}
 }

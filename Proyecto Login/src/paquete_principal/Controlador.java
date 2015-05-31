@@ -69,6 +69,7 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 	 */
 	@Override
 	public void Cerrar() {
+		this.modelo.Cerrarconexion();
 		System.exit(0);
 	}
 
