@@ -87,7 +87,7 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 			this.modelo.registrar_usuario_tabla();
 			return true;
 		} else {
-			cambiar_LblError_registro();
+			informar_errores_registro();
 			return false;
 		}
 	}
@@ -105,7 +105,7 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 		this.modelo.setUsuario(this.Registro.getTxF_Usuario().toString());
 	}
 
-	public void cambiar_LblError_registro() {
+	public void informar_errores_registro() {
 		if (!this.modelo.todos_campos_ingresados_registro()) {
 			// comprobaciones de contraseña
 			this.Registro

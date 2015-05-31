@@ -35,7 +35,7 @@ public interface Int_Controlador {
 	 * Metodo que comprueba los errores que hay en el registro para mostrar un
 	 * mensaje por cada posibilidad de error que se tiene implementada.
 	 */
-	public void cambiar_LblError_registro();
+	public void informar_errores_registro();
 
 	public boolean iniciar_sesion_login();
 
