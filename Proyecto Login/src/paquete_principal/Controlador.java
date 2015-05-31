@@ -106,10 +106,46 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 	}
 
 	public void informar_errores_registro() {
+		// Si hay errores en el registro se entra en la sentencia if.
 		if (!this.modelo.todos_campos_ingresados_registro()) {
-			// comprobaciones de contraseña
-			this.Registro
-					.setLblErrores("Por favor revise bien su registro, ya que hay errores");
+			// comprobaciones de usuario
+			if (!modelo.comprobacion_completa_password_registro()) {
+				if (!modelo.comprobar_password_registro()) {
+					this.Registro
+							.setLblErroresPassword("Las contraseñas no coinciden.");
+				} else {
+					if (!modelo.comprobar_password_longitud()) {
+						this.Registro
+								.setLblErroresPassword("La contraseña debe ser de una longitud de entre 8 y 30 caracteres.");
+					} else {
+						this.Registro.setLblErroresPassword("");
+					}
+				}
+			}
+			// comprobaciones de usuario
+			if (!this.modelo.comprobacion_completa_usuario()) {
+				if (!this.modelo.comprobar_ingreso_usuario()) {
+					this.Registro
+							.setLblErroresUsuario("Ese nombre de usuario ya estat registrado.");
+				} else {
+					if (!this.modelo.comprobar_longitud_Usuario()) {
+						this.Registro
+								.setLblErroresUsuario("Por favor ingrese un nombre de usuario de hasta 30 caracteres.");
+					} else {
+						this.Registro.setLblErroresUsuario("");
+					}
+				}
+			}
+			// comprobar que se ha ingresado algo en el nombre
+			if (!this.modelo.comprobar_ingreso_nombre()) {
+				this.Registro
+						.setLblErroresNombre("Por favor ingrese su nombre.");
+			}
+			if (!this.modelo.comprobar_correo_registro()) {
+				this.Registro
+						.setLblErroresCorreo("Por favor ingrese un correo electronico valido.");
+			}
+
 		}
 
 	}

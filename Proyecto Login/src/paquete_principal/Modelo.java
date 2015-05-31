@@ -242,7 +242,7 @@ public class Modelo implements Int_Modelo {
 
 	public boolean comprobar_password_longitud() {
 		int longitud = this.password_registro.length();
-		if ((longitud < 8) && (longitud > 60)) {
+		if ((longitud > 8) && (longitud < 60)) {
 			return true;
 		} else {
 			return false;
