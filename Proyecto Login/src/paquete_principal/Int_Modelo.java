@@ -63,6 +63,14 @@ public interface Int_Modelo {
 	 */
 	public boolean comprobacion_completa_password_registro();
 
+	/**
+	 * Metodo para comprobar errores en el ingreso de datos del campo usuario en
+	 * el registro.
+	 * 
+	 * @return True si existe algun error y false si esta todo corretco.
+	 */
+	public boolean comprobacion_completa_usuario();
+
 	public boolean comprobar_correo_registro();
 
 	/**

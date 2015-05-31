@@ -107,54 +107,28 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 
 	public void cambiar_LblError_registro() {
 		if (!this.modelo.todos_campos_ingresados_registro()) {
-			if (!this.modelo.comprobar_password_registro()) {
-				this.Registro.setLblErrores("Las contraseñas no coinciden");
-			} else {
-				if (this.modelo.comprobar_password_longitud()) {
-					if (this.modelo.getPassword_registro().length() < 8) {
-						this.Registro
-								.setLblErrores("La contraseña es demasiado corta");
-					}
-					if (this.modelo.getPassword_registro().length() > 60) {
-						this.Registro
-								.setLblErrores("La contraseña es demasiado larga");
-					}
-				} else {
-					if (!this.modelo.comprobar_ingreso_nombre()) {
-						if (this.modelo.getNombre_registro().length() == 0) {
-							this.Registro
-									.setLblErrores("Debe ingresar un nombre");
-						}
-						if (this.modelo.getNombre_registro().length() > 100) {
-							this.Registro
-									.setLblErrores("El nombre ingresado es demasiado largo");
-						}
-					} else {
-						if (!this.modelo.comprobar_longitud_Usuario()) {
-							if (this.modelo.getUsuario().length() == 0) {
-								this.Registro
-										.setLblErrores("Debe ingresar un nombre de Usuario");
-							}
-							if (this.modelo.getNombre_registro().length() > 30) {
-								this.Registro
-										.setLblErrores("El nombre de usuario ingresado es demasiado largo");
-							}
-						} else {
-							if (!this.modelo.comprobar_correo_registro()) {
-								this.Registro
-										.setLblErrores("El e-mail no ha sido ingresado correctamente");
-							}
-						}
-					}
-				}
+			// comprobaciones de contraseña
+			if (!this.modelo.comprobacion_completa_password_registro()) {
+				this.Registro.setLblErrores(comprobaciones_contraseña());
+			}else{
+				if(this.modelo.)
 			}
 		}
+
 	}
 
 	@Override
 	public String comprobaciones_contraseña() {
 		// TODO Auto-generated method stub
-		return null;
-	}
+		if (!modelo.comprobar_password_registro()) {
+			return "Las contraseñas no coinciden";
+		} else {
+			if (modelo.comprobar_password_longitud()) {
+				return "La contraseña debe ser mayor a 8 caracteres y menor que 30";
+			} else {
+				return null;
+			}
+		}
 
+	}
 }
