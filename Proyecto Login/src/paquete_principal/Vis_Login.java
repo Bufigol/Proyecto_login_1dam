@@ -80,8 +80,8 @@ public class Vis_Login extends JFrame implements Int_Login {
 			public void actionPerformed(ActionEvent arg0) {
 				System.out.println("Prueba de etrada a login");
 				if (controlador.iniciar_sesion_login()
-						&& (pswIngresoPassword.getText().length() > 0)
-						&& (txtIngresoUsuario.getText().length() > 0)) {
+						&& (!pswIngresoPassword.getText().isEmpty())
+						&& (!txtIngresoUsuario.getText().isEmpty())) {
 					controlador.LogIn_A_Bienvenido();
 				} else {
 					lblErrores.setText("Error");

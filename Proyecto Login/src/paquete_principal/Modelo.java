@@ -234,9 +234,12 @@ public class Modelo implements Int_Modelo {
 		String usuario = this.login.getUsuario();
 		String password = this.login.getPassword();
 		if (!this.listaUsuarios.isEmpty()) {
-			if (this.listaUsuarios.get(usuario).toString().equals(password)
-					&& (usuario.length() > 0) && (password.length() > 0)) {
-				return true;
+			if ((!usuario.isEmpty()) && (!password.isEmpty())) {
+				if (this.listaUsuarios.get(usuario).toString().equals(password)) {
+					return true;
+				} else {
+					return false;
+				}
 			} else {
 				return false;
 			}
