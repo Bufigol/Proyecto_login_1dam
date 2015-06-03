@@ -1,9 +1,8 @@
 package paquete_principal;
 
+import java.io.*;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import javax.swing.table.DefaultTableModel;
 
@@ -21,12 +20,8 @@ public class Modelo implements Int_Modelo {
 	private String mail_registro;
 	// Listas para el trabajo de datos de manera local
 	private Map<String, String> listaUsuarios;
-
-	// Conexion con la base de datos
-	private String url_conexion_BD;
+	// conexion base de datos
 	private Connection conexion_BD;
-	private String Usuario_BD;
-	private String password_BD;
 	private Statement stmt_BD;
 
 	/**
@@ -39,27 +34,37 @@ public class Modelo implements Int_Modelo {
 	 * @param password_BD
 	 */
 	public Modelo(Vis_Bienvenida bienvenida, Vis_Login login,
-			Vis_Registro registro, String usuario_BD, String password_BD) {
+			Vis_Registro registro) {
+		conexion_BD();
 		this.bienvenida = bienvenida;
 		this.login = login;
 		this.registro = registro;
-		this.url_conexion_BD = "jdbc:oracle:thin:@localhost:1521:XE";
-		conexion_BD(usuario_BD, password_BD);
 		this.listaUsuarios = new HashMap<String, String>();
 		importar_usuarios_y_passwords();
 		agregar_datos_tabla();
-
 	}
 
-	public void conexion_BD(String Usuario, String password) {
+	private void conexion_BD() {
 		try {
-			this.Usuario_BD = Usuario;
-			this.password_BD = password;
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			this.conexion_BD = DriverManager.getConnection(
-					this.url_conexion_BD, this.Usuario_BD, this.password_BD);
-			this.stmt_BD = conexion_BD.createStatement();
-			System.out.println(" - Conexión con ORACLE ABIERTA -");
+			File datos_BD = new File("src/paquete_principal/datos_BD.ini");
+			if (datos_BD.exists()) {
+				Properties propiedades = new Properties();
+				InputStream entrada = null;
+				if (datos_BD.exists()) {
+					entrada = new FileInputStream(datos_BD);
+					// cargamos el archivo de propiedades
+					propiedades.load(entrada);
+					String Usuario_BD = propiedades.getProperty("usuario");
+					String password_BD = propiedades.getProperty("password");
+					String URL = propiedades.getProperty("URL");
+					Class.forName("oracle.jdbc.driver.OracleDriver");
+					this.conexion_BD = DriverManager.getConnection(URL,
+							Usuario_BD, password_BD);
+					System.out.println(" - Conexión con ORACLE ABIERTA -");
+				} else
+					System.err.println("Fichero no encontrado");
+			} else
+				System.err.println("Fichero no encontrado");
 		} catch (Exception e) {
 			System.out.println(" – Error de Conexión con ORACLE-");
 			e.printStackTrace();
