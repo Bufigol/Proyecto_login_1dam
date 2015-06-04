@@ -116,7 +116,7 @@ public interface Int_Modelo {
 			String NOMBRE_ingreso, String PAIS_ingreso, String CIUDAD_ingreso,
 			String ARQUITECTO_ingreso, String LOCALIZACION_ingreso);
 
-	public void borrar_dato_edificio(String NOMBRE_ORIGINAL);
+	public void borrar_dato_edificio(String NOMBRE_ORIGINAL,int fila);
 
 	public void agregar_datos_tabla();
 

@@ -129,18 +129,7 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 				DefaultTableModel model = (DefaultTableModel) tblEdificios
 						.getModel();
 				int fila_selected = tblEdificios.getSelectedRow();
-				if (tblEdificios.getSelectedRow() == -1) {
-					if (tblEdificios.getRowCount() == 0) {
-						lblMensaje.setText("La tabla está vacia");
-					} else {
-						lblMensaje
-								.setText("Seleccione algún registro primero para modificarlo");
-					}
-				} else {
-					model.removeRow(fila_selected);
-					controlador.baja_edificio();
-				}
-
+				controlador.baja_edificio(fila_selected);
 			}
 		});
 		btnBaja.setBounds(317, 403, 71, 40);
@@ -314,5 +303,12 @@ public class Vis_Bienvenida extends JFrame implements Int_Bienvenida {
 
 	public String getNombreAntiguo() {
 		return this.NombreAntiguo;
+	}
+
+	/**
+	 * @return the lblMensaje
+	 */
+	public JLabel getLblMensaje() {
+		return lblMensaje;
 	}
 }

@@ -1,5 +1,7 @@
 package paquete_principal;
 
+import javax.swing.table.DefaultTableModel;
+
 public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 	private Vis_Bienvenida Bienvenida;
 	private Vis_Login LogIn;
@@ -182,8 +184,19 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 				this.Bienvenida.getTxfLocalizacion());
 	}
 
-	public void baja_edificio() {
-		this.modelo.borrar_dato_edificio(this.Bienvenida.getTxfNombre());
+	public void baja_edificio(int fila) {
+		if (fila == -1) {
+			if (fila == 0) {
+				this.Bienvenida.getLblMensaje().setText("La tabla está vacia");
+			} else {
+				this.Bienvenida.getLblMensaje().setText(
+						"Seleccione algún registro primero para modificarlo");
+			}
+		} else {
+			System.out.println("Estoy en el controlador");
+			this.modelo.borrar_dato_edificio(this.Bienvenida.getTxfNombre(),fila);
+		}
+
 	}
 
 	public void actualizacion_edificio() {

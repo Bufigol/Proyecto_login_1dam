@@ -92,22 +92,22 @@ public class Vis_Registro extends JFrame implements Int_Registro {
 				controlador.Cerrar();
 			}
 		});
-		
+
 		lblErroresNombre = new JLabel(" ");
-		
+
 		lblErroresCorreo = new JLabel(" ");
-								
-										lblUsuario = new JLabel("Usuario");
-						
-								TxF_Usuario = new JTextField();
-								TxF_Usuario.setColumns(10);
-						
-						lblErroresUsuario = new JLabel(" ");
-				
-						lblCorreo = new JLabel("Correo");
-		
-				TxF_Correo = new JTextField();
-				TxF_Correo.setColumns(10);
+
+		lblUsuario = new JLabel("Usuario");
+
+		TxF_Usuario = new JTextField();
+		TxF_Usuario.setColumns(10);
+
+		lblErroresUsuario = new JLabel(" ");
+
+		lblCorreo = new JLabel("Correo");
+
+		TxF_Correo = new JTextField();
+		TxF_Correo.setColumns(10);
 		btnRegistrarse = new JButton("Registrarse");
 		btnRegistrarse.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -116,86 +116,224 @@ public class Vis_Registro extends JFrame implements Int_Registro {
 				}
 			}
 		});
-								
-										lblPassword = new JLabel("Password");
-						
-								TxF_Pass = new JTextField();
-								TxF_Pass.setColumns(10);
-						
-						lblErroresPassword = new JLabel(" ");
-				
-						lblRepetirPassword = new JLabel("Repetir Password");
-		
-				TxF_RepPass = new JTextField();
-				TxF_RepPass.setColumns(10);
+
+		lblPassword = new JLabel("Password");
+
+		TxF_Pass = new JTextField();
+		TxF_Pass.setColumns(10);
+
+		lblErroresPassword = new JLabel(" ");
+
+		lblRepetirPassword = new JLabel("Repetir Password");
+
+		TxF_RepPass = new JTextField();
+		TxF_RepPass.setColumns(10);
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
-		groupLayout.setHorizontalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addComponent(lblNombre, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
-					.addComponent(TxF_Nombre, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(lblErroresNombre, GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-					.addContainerGap())
-				.addGroup(groupLayout.createSequentialGroup()
-					.addComponent(lblUsuario, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
-					.addComponent(TxF_Usuario, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(lblErroresUsuario, GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-					.addContainerGap())
-				.addGroup(groupLayout.createSequentialGroup()
-					.addComponent(lblCorreo, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
-					.addComponent(TxF_Correo, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(lblErroresCorreo, GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-					.addContainerGap())
-				.addGroup(groupLayout.createSequentialGroup()
-					.addComponent(lblPassword, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
-					.addComponent(TxF_Pass, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
-					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(lblErroresPassword, GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-					.addContainerGap())
-				.addGroup(groupLayout.createSequentialGroup()
-					.addComponent(lblRepetirPassword, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
-					.addComponent(TxF_RepPass, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
-					.addGap(174))
-				.addGroup(groupLayout.createSequentialGroup()
-					.addComponent(btnRegistrarse)
-					.addComponent(btnCancelar, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
-					.addComponent(btnSalir, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
-					.addGap(87))
-		);
-		groupLayout.setVerticalGroup(
-			groupLayout.createParallelGroup(Alignment.LEADING)
-				.addGroup(groupLayout.createSequentialGroup()
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblNombre, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
-						.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-							.addComponent(TxF_Nombre, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
-							.addComponent(lblErroresNombre, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)))
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblUsuario, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
-						.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-							.addComponent(TxF_Usuario, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
-							.addComponent(lblErroresUsuario, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)))
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblCorreo, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
-						.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-							.addComponent(TxF_Correo, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
-							.addComponent(lblErroresCorreo, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)))
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblPassword, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
-						.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-							.addComponent(TxF_Pass, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
-							.addComponent(lblErroresPassword, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)))
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblRepetirPassword, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
-						.addComponent(TxF_RepPass, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE))
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
-						.addComponent(btnRegistrarse)
-						.addComponent(btnCancelar)
-						.addComponent(btnSalir)))
-		);
+		groupLayout
+				.setHorizontalGroup(groupLayout
+						.createParallelGroup(Alignment.LEADING)
+						.addGroup(
+								groupLayout
+										.createSequentialGroup()
+										.addComponent(lblNombre,
+												GroupLayout.PREFERRED_SIZE, 87,
+												GroupLayout.PREFERRED_SIZE)
+										.addComponent(TxF_Nombre,
+												GroupLayout.PREFERRED_SIZE, 87,
+												GroupLayout.PREFERRED_SIZE)
+										.addPreferredGap(
+												ComponentPlacement.RELATED)
+										.addComponent(lblErroresNombre,
+												GroupLayout.DEFAULT_SIZE, 160,
+												Short.MAX_VALUE)
+										.addContainerGap())
+						.addGroup(
+								groupLayout
+										.createSequentialGroup()
+										.addComponent(lblUsuario,
+												GroupLayout.PREFERRED_SIZE, 87,
+												GroupLayout.PREFERRED_SIZE)
+										.addComponent(TxF_Usuario,
+												GroupLayout.PREFERRED_SIZE, 87,
+												GroupLayout.PREFERRED_SIZE)
+										.addPreferredGap(
+												ComponentPlacement.RELATED)
+										.addComponent(lblErroresUsuario,
+												GroupLayout.DEFAULT_SIZE, 160,
+												Short.MAX_VALUE)
+										.addContainerGap())
+						.addGroup(
+								groupLayout
+										.createSequentialGroup()
+										.addComponent(lblCorreo,
+												GroupLayout.PREFERRED_SIZE, 87,
+												GroupLayout.PREFERRED_SIZE)
+										.addComponent(TxF_Correo,
+												GroupLayout.PREFERRED_SIZE, 87,
+												GroupLayout.PREFERRED_SIZE)
+										.addPreferredGap(
+												ComponentPlacement.RELATED)
+										.addComponent(lblErroresCorreo,
+												GroupLayout.DEFAULT_SIZE, 160,
+												Short.MAX_VALUE)
+										.addContainerGap())
+						.addGroup(
+								groupLayout
+										.createSequentialGroup()
+										.addComponent(lblPassword,
+												GroupLayout.PREFERRED_SIZE, 87,
+												GroupLayout.PREFERRED_SIZE)
+										.addComponent(TxF_Pass,
+												GroupLayout.PREFERRED_SIZE, 87,
+												GroupLayout.PREFERRED_SIZE)
+										.addPreferredGap(
+												ComponentPlacement.RELATED)
+										.addComponent(lblErroresPassword,
+												GroupLayout.DEFAULT_SIZE, 160,
+												Short.MAX_VALUE)
+										.addContainerGap())
+						.addGroup(
+								groupLayout
+										.createSequentialGroup()
+										.addComponent(lblRepetirPassword,
+												GroupLayout.PREFERRED_SIZE, 87,
+												GroupLayout.PREFERRED_SIZE)
+										.addComponent(TxF_RepPass,
+												GroupLayout.PREFERRED_SIZE, 87,
+												GroupLayout.PREFERRED_SIZE)
+										.addGap(174))
+						.addGroup(
+								groupLayout
+										.createSequentialGroup()
+										.addComponent(btnRegistrarse)
+										.addComponent(btnCancelar,
+												GroupLayout.PREFERRED_SIZE, 87,
+												GroupLayout.PREFERRED_SIZE)
+										.addComponent(btnSalir,
+												GroupLayout.PREFERRED_SIZE, 87,
+												GroupLayout.PREFERRED_SIZE)
+										.addGap(87)));
+		groupLayout
+				.setVerticalGroup(groupLayout
+						.createParallelGroup(Alignment.LEADING)
+						.addGroup(
+								groupLayout
+										.createSequentialGroup()
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.LEADING)
+														.addComponent(
+																lblNombre,
+																GroupLayout.PREFERRED_SIZE,
+																23,
+																GroupLayout.PREFERRED_SIZE)
+														.addGroup(
+																groupLayout
+																		.createParallelGroup(
+																				Alignment.BASELINE)
+																		.addComponent(
+																				TxF_Nombre,
+																				GroupLayout.PREFERRED_SIZE,
+																				23,
+																				GroupLayout.PREFERRED_SIZE)
+																		.addComponent(
+																				lblErroresNombre,
+																				GroupLayout.PREFERRED_SIZE,
+																				23,
+																				GroupLayout.PREFERRED_SIZE)))
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.LEADING)
+														.addComponent(
+																lblUsuario,
+																GroupLayout.PREFERRED_SIZE,
+																23,
+																GroupLayout.PREFERRED_SIZE)
+														.addGroup(
+																groupLayout
+																		.createParallelGroup(
+																				Alignment.BASELINE)
+																		.addComponent(
+																				TxF_Usuario,
+																				GroupLayout.PREFERRED_SIZE,
+																				23,
+																				GroupLayout.PREFERRED_SIZE)
+																		.addComponent(
+																				lblErroresUsuario,
+																				GroupLayout.PREFERRED_SIZE,
+																				23,
+																				GroupLayout.PREFERRED_SIZE)))
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.LEADING)
+														.addComponent(
+																lblCorreo,
+																GroupLayout.PREFERRED_SIZE,
+																23,
+																GroupLayout.PREFERRED_SIZE)
+														.addGroup(
+																groupLayout
+																		.createParallelGroup(
+																				Alignment.BASELINE)
+																		.addComponent(
+																				TxF_Correo,
+																				GroupLayout.PREFERRED_SIZE,
+																				23,
+																				GroupLayout.PREFERRED_SIZE)
+																		.addComponent(
+																				lblErroresCorreo,
+																				GroupLayout.PREFERRED_SIZE,
+																				23,
+																				GroupLayout.PREFERRED_SIZE)))
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.LEADING)
+														.addComponent(
+																lblPassword,
+																GroupLayout.PREFERRED_SIZE,
+																23,
+																GroupLayout.PREFERRED_SIZE)
+														.addGroup(
+																groupLayout
+																		.createParallelGroup(
+																				Alignment.BASELINE)
+																		.addComponent(
+																				TxF_Pass,
+																				GroupLayout.PREFERRED_SIZE,
+																				23,
+																				GroupLayout.PREFERRED_SIZE)
+																		.addComponent(
+																				lblErroresPassword,
+																				GroupLayout.PREFERRED_SIZE,
+																				23,
+																				GroupLayout.PREFERRED_SIZE)))
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.LEADING)
+														.addComponent(
+																lblRepetirPassword,
+																GroupLayout.PREFERRED_SIZE,
+																23,
+																GroupLayout.PREFERRED_SIZE)
+														.addComponent(
+																TxF_RepPass,
+																GroupLayout.PREFERRED_SIZE,
+																23,
+																GroupLayout.PREFERRED_SIZE))
+										.addGroup(
+												groupLayout
+														.createParallelGroup(
+																Alignment.LEADING)
+														.addComponent(
+																btnRegistrarse)
+														.addComponent(
+																btnCancelar)
+														.addComponent(btnSalir))));
 		getContentPane().setLayout(groupLayout);
 
 		pack();
@@ -257,32 +395,35 @@ public class Vis_Registro extends JFrame implements Int_Registro {
 	}
 
 	/**
-	 * @param lblErroresNombre the lblErroresNombre to set
+	 * @param lblErroresNombre
+	 *            the lblErroresNombre to set
 	 */
 	public void setLblErroresNombre(String lblErroresNombre) {
 		this.lblErroresNombre.setText(lblErroresNombre);
 	}
 
 	/**
-	 * @param lblErroresUsuario the lblErroresUsuario to set
+	 * @param lblErroresUsuario
+	 *            the lblErroresUsuario to set
 	 */
 	public void setLblErroresUsuario(String lblErroresUsuario) {
 		this.lblErroresUsuario.setText(lblErroresUsuario);
 	}
 
 	/**
-	 * @param lblErroresCorreo the lblErroresCorreo to set
+	 * @param lblErroresCorreo
+	 *            the lblErroresCorreo to set
 	 */
 	public void setLblErroresCorreo(String lblErroresCorreo) {
 		this.lblErroresCorreo.setText(lblErroresCorreo);
 	}
 
 	/**
-	 * @param lblErroresPassword the lblErroresPassword to set
+	 * @param lblErroresPassword
+	 *            the lblErroresPassword to set
 	 */
 	public void setLblErroresPassword(String lblErroresPassword) {
-		this.lblErroresPassword.setText(lblErroresPassword); 
+		this.lblErroresPassword.setText(lblErroresPassword);
 	}
 
-	
 }

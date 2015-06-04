@@ -47,7 +47,7 @@ public interface Int_Controlador {
 
 	public void nuevo_registro_edificio();
 
-	public void baja_edificio();
+	public void baja_edificio(int fila);
 
 	public void actualizacion_edificio();
 

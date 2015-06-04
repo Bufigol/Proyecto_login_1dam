@@ -490,7 +490,7 @@ public class Modelo implements Int_Modelo {
 	}
 
 	@Override
-	public void borrar_dato_edificio(String NOMBRE_ORIGINAL) {
+	public void borrar_dato_edificio(String NOMBRE_ORIGINAL, int fila) {
 		// TODO Auto-generated method stub
 		String procedimiento = "{call PROYECTO_LOGIN.BORRAR_EDIFICIO (?)}";
 		try {
@@ -498,6 +498,9 @@ public class Modelo implements Int_Modelo {
 			borrado.setString(1, NOMBRE_ORIGINAL);
 			borrado.execute();
 			borrado.close();
+			DefaultTableModel model = (DefaultTableModel) this.bienvenida
+					.getTblEdificios().getModel();
+			model.removeRow(fila);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
