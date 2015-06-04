@@ -17,6 +17,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Rectangle;
 import java.awt.Dimension;
+import java.awt.GridLayout;
 
 /**
  *
@@ -48,7 +49,7 @@ public class Vis_Registro extends JFrame implements Int_Registro {
 	 * Creates new form Vis_Registro
 	 */
 	public Vis_Registro() {
-		setSize(new Dimension(453, 343));
+		setSize(new Dimension(500, 500));
 		setTitle("Registro");
 		initComponents();
 	}
@@ -67,28 +68,8 @@ public class Vis_Registro extends JFrame implements Int_Registro {
 
 		lblNombre = new JLabel("Nombre");
 
-		lblUsuario = new JLabel("Usuario");
-
-		lblCorreo = new JLabel("Correo");
-
-		lblPassword = new JLabel("Password");
-
 		TxF_Nombre = new JTextField();
 		TxF_Nombre.setColumns(10);
-
-		TxF_Usuario = new JTextField();
-		TxF_Usuario.setColumns(10);
-
-		TxF_Correo = new JTextField();
-		TxF_Correo.setColumns(10);
-
-		TxF_Pass = new JTextField();
-		TxF_Pass.setColumns(10);
-
-		TxF_RepPass = new JTextField();
-		TxF_RepPass.setColumns(10);
-
-		lblRepetirPassword = new JLabel("Repetir Password");
 
 		/**
 		 * 
@@ -96,14 +77,6 @@ public class Vis_Registro extends JFrame implements Int_Registro {
 		 * metodo "Registro_A_Bienvenido" del Controlador y se pasa a ventana
 		 * Bienvenida
 		 */
-		btnRegistrarse = new JButton("Registrarse");
-		btnRegistrarse.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if (controlador.registrar_nuevo_usuario()) {
-					controlador.Registro_A_Bienvenido();
-				}
-			}
-		});
 
 		btnCancelar = new JButton("Cancelar");
 		btnCancelar.addActionListener(new ActionListener() {
@@ -122,97 +95,108 @@ public class Vis_Registro extends JFrame implements Int_Registro {
 		
 		lblErroresNombre = new JLabel(" ");
 		
-		lblErroresUsuario = new JLabel(" ");
-		
 		lblErroresCorreo = new JLabel(" ");
+								
+										lblUsuario = new JLabel("Usuario");
+						
+								TxF_Usuario = new JTextField();
+								TxF_Usuario.setColumns(10);
+						
+						lblErroresUsuario = new JLabel(" ");
+				
+						lblCorreo = new JLabel("Correo");
 		
-		lblErroresPassword = new JLabel(" ");
-
-		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(
-				getContentPane());
-		layout.setHorizontalGroup(
-			layout.createParallelGroup(Alignment.TRAILING)
-				.addGroup(layout.createSequentialGroup()
-					.addGap(42)
-					.addGroup(layout.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblPassword, GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-						.addGroup(layout.createSequentialGroup()
-							.addGroup(layout.createParallelGroup(Alignment.TRAILING)
-								.addComponent(lblUsuario, GroupLayout.PREFERRED_SIZE, 45, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblCorreo, GroupLayout.PREFERRED_SIZE, 44, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblNombre, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE))
-							.addPreferredGap(ComponentPlacement.RELATED))
-						.addGroup(Alignment.TRAILING, layout.createSequentialGroup()
-							.addGroup(layout.createParallelGroup(Alignment.TRAILING)
-								.addComponent(btnRegistrarse)
-								.addComponent(lblRepetirPassword, GroupLayout.DEFAULT_SIZE, 94, Short.MAX_VALUE))
-							.addPreferredGap(ComponentPlacement.RELATED)))
-					.addGroup(layout.createParallelGroup(Alignment.LEADING)
-						.addGroup(layout.createSequentialGroup()
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addGroup(layout.createParallelGroup(Alignment.TRAILING)
-								.addGroup(layout.createParallelGroup(Alignment.LEADING)
-									.addComponent(TxF_RepPass, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE)
-									.addComponent(TxF_Pass, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE)
-									.addComponent(TxF_Correo, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE))
-								.addComponent(TxF_Usuario, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE)
-								.addComponent(TxF_Nombre, GroupLayout.PREFERRED_SIZE, 146, GroupLayout.PREFERRED_SIZE))
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addGroup(layout.createParallelGroup(Alignment.LEADING)
-								.addGroup(layout.createParallelGroup(Alignment.TRAILING, false)
-									.addComponent(lblErroresUsuario, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-									.addComponent(lblErroresPassword, GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE))
-								.addComponent(lblErroresNombre, GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE)
-								.addComponent(lblErroresCorreo, GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE)))
-						.addGroup(layout.createSequentialGroup()
-							.addGap(12)
-							.addComponent(btnCancelar)
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(btnSalir)))
+				TxF_Correo = new JTextField();
+				TxF_Correo.setColumns(10);
+		btnRegistrarse = new JButton("Registrarse");
+		btnRegistrarse.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (controlador.registrar_nuevo_usuario()) {
+					controlador.Registro_A_Bienvenido();
+				}
+			}
+		});
+								
+										lblPassword = new JLabel("Password");
+						
+								TxF_Pass = new JTextField();
+								TxF_Pass.setColumns(10);
+						
+						lblErroresPassword = new JLabel(" ");
+				
+						lblRepetirPassword = new JLabel("Repetir Password");
+		
+				TxF_RepPass = new JTextField();
+				TxF_RepPass.setColumns(10);
+		GroupLayout groupLayout = new GroupLayout(getContentPane());
+		groupLayout.setHorizontalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addComponent(lblNombre, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
+					.addComponent(TxF_Nombre, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(lblErroresNombre, GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
 					.addContainerGap())
+				.addGroup(groupLayout.createSequentialGroup()
+					.addComponent(lblUsuario, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
+					.addComponent(TxF_Usuario, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(lblErroresUsuario, GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+					.addContainerGap())
+				.addGroup(groupLayout.createSequentialGroup()
+					.addComponent(lblCorreo, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
+					.addComponent(TxF_Correo, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(lblErroresCorreo, GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+					.addContainerGap())
+				.addGroup(groupLayout.createSequentialGroup()
+					.addComponent(lblPassword, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
+					.addComponent(TxF_Pass, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
+					.addComponent(lblErroresPassword, GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+					.addContainerGap())
+				.addGroup(groupLayout.createSequentialGroup()
+					.addComponent(lblRepetirPassword, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
+					.addComponent(TxF_RepPass, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
+					.addGap(174))
+				.addGroup(groupLayout.createSequentialGroup()
+					.addComponent(btnRegistrarse)
+					.addComponent(btnCancelar, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
+					.addComponent(btnSalir, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
+					.addGap(87))
 		);
-		layout.setVerticalGroup(
-			layout.createParallelGroup(Alignment.LEADING)
-				.addGroup(layout.createSequentialGroup()
-					.addGap(59)
-					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(TxF_Nombre, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblNombre)
-						.addComponent(lblErroresNombre))
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addGroup(layout.createParallelGroup(Alignment.LEADING)
-						.addGroup(layout.createParallelGroup(Alignment.TRAILING)
-							.addComponent(TxF_Usuario, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-							.addComponent(lblUsuario))
-						.addComponent(lblErroresUsuario))
-					.addGap(12)
-					.addGroup(layout.createParallelGroup(Alignment.LEADING)
-						.addGroup(layout.createSequentialGroup()
-							.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-								.addComponent(lblCorreo)
-								.addComponent(TxF_Correo, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblErroresCorreo))
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-								.addComponent(lblPassword)
-								.addComponent(TxF_Pass, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-							.addPreferredGap(ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-							.addGroup(layout.createParallelGroup(Alignment.BASELINE)
-								.addComponent(lblRepetirPassword)
-								.addComponent(TxF_RepPass, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-							.addGap(37))
-						.addGroup(layout.createSequentialGroup()
-							.addGap(36)
-							.addComponent(lblErroresPassword)
-							.addPreferredGap(ComponentPlacement.RELATED)))
-					.addGap(34)
-					.addGroup(layout.createParallelGroup(Alignment.BASELINE)
+		groupLayout.setVerticalGroup(
+			groupLayout.createParallelGroup(Alignment.LEADING)
+				.addGroup(groupLayout.createSequentialGroup()
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(lblNombre, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
+						.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+							.addComponent(TxF_Nombre, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
+							.addComponent(lblErroresNombre, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)))
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(lblUsuario, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
+						.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+							.addComponent(TxF_Usuario, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
+							.addComponent(lblErroresUsuario, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)))
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(lblCorreo, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
+						.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+							.addComponent(TxF_Correo, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
+							.addComponent(lblErroresCorreo, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)))
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(lblPassword, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
+						.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
+							.addComponent(TxF_Pass, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
+							.addComponent(lblErroresPassword, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)))
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addComponent(lblRepetirPassword, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)
+						.addComponent(TxF_RepPass, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE))
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
 						.addComponent(btnRegistrarse)
-						.addComponent(btnCancelar, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-						.addComponent(btnSalir))
-					.addGap(22))
+						.addComponent(btnCancelar)
+						.addComponent(btnSalir)))
 		);
-		getContentPane().setLayout(layout);
+		getContentPane().setLayout(groupLayout);
 
 		pack();
 	}// </editor-fold>//GEN-END:initComponents
