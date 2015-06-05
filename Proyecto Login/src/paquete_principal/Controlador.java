@@ -60,6 +60,7 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 	 */
 	public void Registro_A_Bienvenido() {
 		this.Registro.setVisible(false);
+		this.Bienvenida.getFrmWelcome().setVisible(true);
 		this.Bienvenida.setVisible(true);
 	}
 
@@ -194,7 +195,8 @@ public class Controlador extends javax.swing.JFrame implements Int_Controlador {
 			}
 		} else {
 			System.out.println("Estoy en el controlador");
-			this.modelo.borrar_dato_edificio(this.Bienvenida.getTxfNombre(),fila);
+			this.modelo.borrar_dato_edificio(this.Bienvenida.getTxfNombre(),
+					fila);
 		}
 
 	}

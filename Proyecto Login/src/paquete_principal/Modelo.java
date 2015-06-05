@@ -35,10 +35,13 @@ public class Modelo implements Int_Modelo {
 	 */
 	public Modelo(Vis_Bienvenida bienvenida, Vis_Login login,
 			Vis_Registro registro) {
+		//conexion con la base de datos
 		conexion_BD();
+		//relacion entre objetos
 		this.bienvenida = bienvenida;
 		this.login = login;
 		this.registro = registro;
+		//Impotacion de datos
 		this.listaUsuarios = new HashMap<String, String>();
 		importar_usuarios_y_passwords();
 		agregar_datos_tabla();
@@ -240,8 +243,13 @@ public class Modelo implements Int_Modelo {
 		String password = this.login.getPassword();
 		if (!this.listaUsuarios.isEmpty()) {
 			if ((!usuario.isEmpty()) && (!password.isEmpty())) {
-				if (this.listaUsuarios.get(usuario).toString().equals(password)) {
-					return true;
+				if (this.listaUsuarios.containsKey(usuario)) {
+					if (this.listaUsuarios.get(usuario).toString()
+							.equals(password)) {
+						return true;
+					} else {
+						return false;
+					}
 				} else {
 					return false;
 				}
