@@ -3,7 +3,7 @@
   associations="true" dependencies="true" nesting-relationships="true">  
   <class id="1" language="java" name="paquete_principal.Controlador" project="Proyecto Login" 
     file="/Proyecto Login/src/paquete_principal/Controlador.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="405" width="222" x="582" y="464"/>    
+    <position height="405" width="222" x="676" y="1462"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <interface id="2" language="java" name="paquete_principal.Int_Controlador" project="Proyecto Login" 
     file="/Proyecto Login/src/paquete_principal/Int_Controlador.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="387" width="222" x="339" y="37"/>    
+    <position height="387" width="222" x="249" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </interface>  
   <interface id="3" language="java" name="paquete_principal.Int_Bienvenida" project="Proyecto Login" 
     file="/Proyecto Login/src/paquete_principal/Int_Bienvenida.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="207" width="184" x="43" y="37"/>    
+    <position height="207" width="184" x="84" y="1179"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </interface>  
   <interface id="4" language="java" name="paquete_principal.Int_Login" project="Proyecto Login" 
     file="/Proyecto Login/src/paquete_principal/Int_Login.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="153" width="184" x="601" y="37"/>    
+    <position height="153" width="184" x="737" y="1179"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </interface>  
   <interface id="5" language="java" name="paquete_principal.Int_Modelo" project="Proyecto Login" 
     file="/Proyecto Login/src/paquete_principal/Int_Modelo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="441" width="354" x="125" y="464"/>    
+    <position height="441" width="354" x="569" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,7 +48,7 @@
   </interface>  
   <interface id="6" language="java" name="paquete_principal.Int_Registro" project="Proyecto Login" 
     file="/Proyecto Login/src/paquete_principal/Int_Registro.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="243" width="200" x="825" y="37"/>    
+    <position height="243" width="200" x="392" y="1179"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,7 @@
   </interface>  
   <class id="7" language="java" name="paquete_principal.Modelo" project="Proyecto Login" 
     file="/Proyecto Login/src/paquete_principal/Modelo.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="1071" width="354" x="167" y="1606"/>    
+    <position height="1017" width="354" x="331" y="1907"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -66,7 +66,7 @@
   </class>  
   <class id="8" language="java" name="paquete_principal.Vis_Bienvenida" project="Proyecto Login" 
     file="/Proyecto Login/src/paquete_principal/Vis_Bienvenida.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="657" width="184" x="167" y="2717"/>    
+    <position height="675" width="184" x="706" y="2964"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -75,7 +75,7 @@
   </class>  
   <class id="9" language="java" name="paquete_principal.Vis_Login" project="Proyecto Login" 
     file="/Proyecto Login/src/paquete_principal/Vis_Login.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="351" width="217" x="167" y="945"/>    
+    <position height="351" width="217" x="697" y="518"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -84,213 +84,312 @@
   </class>  
   <class id="10" language="java" name="paquete_principal.Vis_Registro" project="Proyecto Login" 
     file="/Proyecto Login/src/paquete_principal/Vis_Registro.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="621" width="200" x="424" y="945"/>    
+    <position height="621" width="200" x="457" y="518"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <dependency id="11">    
-    <bendpoint x="855" y="464"/>    
-    <bendpoint x="855" y="945"/>    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="7"/>  
-  </dependency>  
+  <class id="11" language="java" name="paquete_principal.Launcher" project="Proyecto Login" 
+    file="/Proyecto Login/src/paquete_principal/Launcher.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="113" x="963" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
   <dependency id="12">    
-    <bendpoint x="551" y="464"/>    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="10"/>  
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="1"/>  
   </dependency>  
   <association id="13">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="14" name="bienvenida"/>      
-      <multiplicity id="15" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="16">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="10"/>  
-  </dependency>  
-  <dependency id="17">    
-    <bendpoint x="94" y="945"/>    
-    <bendpoint x="94" y="1606"/>    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="8"/>  
-  </dependency>  
-  <dependency id="18">    
-    <bendpoint x="73" y="464"/>    
-    <bendpoint x="52" y="945"/>    
-    <bendpoint x="52" y="1606"/>    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="8"/>  
-  </dependency>  
-  <realization id="19">    
-    <bendpoint x="31" y="1606"/>    
-    <bendpoint x="31" y="945"/>    
-    <bendpoint x="31" y="464"/>    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="3"/>  
-  </realization>  
-  <dependency id="20">    
-    <bendpoint x="876" y="464"/>    
-    <bendpoint x="876" y="945"/>    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="7"/>  
-  </dependency>  
-  <association id="21">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="22" name="registro"/>      
-      <multiplicity id="23" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="24">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <dependency id="25">    
-    <bendpoint x="509" y="464"/>    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <dependency id="26">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="9"/>  
-  </dependency>  
-  <association id="27">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="28" name="Registro"/>      
-      <multiplicity id="29" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="30">    
-    <bendpoint x="654" y="945"/>    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="31" name="modelo"/>      
-      <multiplicity id="32" minimum="0" maximum="1"/>    
+      <attribute id="14" name="modelo">        
+        <position height="0" width="0" x="814" y="-1140"/>      
+      </attribute>      
+      <multiplicity id="15" minimum="0" maximum="1">        
+        <position height="0" width="0" x="814" y="-1140"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="33">    
-    <bendpoint x="696" y="1606"/>    
-    <bendpoint x="696" y="945"/>    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="34" name="controlador"/>      
-      <multiplicity id="35" minimum="0" maximum="1"/>    
+  <dependency id="16">    
+    <bendpoint x="928" y="1462"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="17">    
+    <bendpoint x="1014" y="518"/>    
+    <bendpoint x="1014" y="1179"/>    
+    <bendpoint x="972" y="1462"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <realization id="18">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
+  <association id="19">    
+    <bendpoint x="622" y="1179"/>    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="20" name="controlador">        
+        <position height="0" width="0" x="147" y="35"/>      
+      </attribute>      
+      <multiplicity id="21" minimum="0" maximum="1">        
+        <position height="0" width="0" x="147" y="35"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="36">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="37" name="modelo"/>      
-      <multiplicity id="38" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="39">    
-    <bendpoint x="94" y="464"/>    
-    <bendpoint x="115" y="945"/>    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="7"/>  
+  <dependency id="22">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="10"/>  
   </dependency>  
-  <association id="40">    
-    <bendpoint x="675" y="945"/>    
-    <bendpoint x="675" y="1606"/>    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="41" name="Bienvenida"/>      
-      <multiplicity id="42" minimum="0" maximum="1"/>    
+  <association id="23">    
+    <bendpoint x="685" y="1179"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="24" name="controlador">        
+        <position height="0" width="0" x="147" y="35"/>      
+      </attribute>      
+      <multiplicity id="25" minimum="0" maximum="1">        
+        <position height="0" width="0" x="147" y="35"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
+    <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="43">    
-    <bendpoint x="136" y="945"/>    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <realization id="44">    
-    <bendpoint x="530" y="464"/>    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="4"/>  
-  </realization>  
-  <association id="45">    
+  <association id="26">    
+    <bendpoint x="951" y="1462"/>    
+    <bendpoint x="951" y="1179"/>    
     <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="46" name="login"/>      
-      <multiplicity id="47" minimum="0" maximum="1"/>    
+      <attribute id="27" name="login">        
+        <position height="0" width="0" x="328" y="-657"/>      
+      </attribute>      
+      <multiplicity id="28" minimum="0" maximum="1">        
+        <position height="0" width="0" x="328" y="-657"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="48">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="49" name="controlador"/>      
-      <multiplicity id="50" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="51">    
+  <realization id="29">    
+    <bendpoint x="298" y="1462"/>    
+    <bendpoint x="298" y="1179"/>    
+    <bendpoint x="298" y="518"/>    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <realization id="30">    
+    <bendpoint x="53" y="1907"/>    
+    <bendpoint x="53" y="1462"/>    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <realization id="31">    
+    <bendpoint x="361" y="1179"/>    
+    <bendpoint x="361" y="518"/>    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <dependency id="32">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="33">    
+    <bendpoint x="370" y="1462"/>    
     <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="34">    
+    <bendpoint x="972" y="518"/>    
+    <bendpoint x="972" y="1179"/>    
+    <end type="SOURCE" refId="11"/>    
     <end type="TARGET" refId="1"/>  
   </dependency>  
-  <association id="52">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="53" name="controlador"/>      
-      <multiplicity id="54" minimum="0" maximum="1"/>    
+  <association id="35">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="36" name="modelo">        
+        <position height="0" width="0" x="814" y="-1140"/>      
+      </attribute>      
+      <multiplicity id="37" minimum="0" maximum="1">        
+        <position height="0" width="0" x="814" y="-1140"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
+    <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="55">    
-    <bendpoint x="834" y="464"/>    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="6"/>  
-  </realization>  
-  <dependency id="56">    
-    <bendpoint x="52" y="464"/>    
-    <bendpoint x="73" y="945"/>    
+  <association id="38">    
+    <bendpoint x="319" y="1179"/>    
+    <bendpoint x="319" y="1462"/>    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="39" name="modelo">        
+        <position height="0" width="0" x="814" y="-1140"/>      
+      </attribute>      
+      <multiplicity id="40" minimum="0" maximum="1">        
+        <position height="0" width="0" x="814" y="-1140"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="41">    
+    <bendpoint x="340" y="1462"/>    
+    <bendpoint x="340" y="1179"/>    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="42" name="registro">        
+        <position height="0" width="0" x="-159" y="-623"/>      
+      </attribute>      
+      <multiplicity id="43" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-159" y="-623"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="44">    
+    <bendpoint x="32" y="518"/>    
+    <bendpoint x="32" y="1179"/>    
+    <bendpoint x="32" y="1462"/>    
+    <bendpoint x="32" y="1907"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <association id="45">    
+    <bendpoint x="664" y="1179"/>    
+    <bendpoint x="645" y="1462"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="46" name="modelo">        
+        <position height="0" width="0" x="814" y="-1140"/>      
+      </attribute>      
+      <multiplicity id="47" minimum="0" maximum="1">        
+        <position height="0" width="0" x="814" y="-1140"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="48">    
+    <bendpoint x="53" y="518"/>    
+    <bendpoint x="53" y="1179"/>    
+    <bendpoint x="74" y="1462"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="49">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="50">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="51">    
+    <bendpoint x="216" y="1462"/>    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="52">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <association id="53">    
+    <bendpoint x="715" y="1907"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="54" name="Bienvenida">        
+        <position height="0" width="0" x="-126" y="-2426"/>      
+      </attribute>      
+      <multiplicity id="55" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-126" y="-2426"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="56">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="1"/>  
   </dependency>  
   <dependency id="57">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="1"/>  
   </dependency>  
-  <dependency id="58">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="1"/>  
-  </dependency>  
-  <association id="59">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="60" name="modelo"/>      
-      <multiplicity id="61" minimum="0" maximum="1"/>    
+  <association id="58">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="59" name="bienvenida">        
+        <position height="0" width="0" x="-126" y="-2426"/>      
+      </attribute>      
+      <multiplicity id="60" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-126" y="-2426"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <realization id="61">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
   <association id="62">    
+    <bendpoint x="736" y="1907"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="63" name="controlador">        
+        <position height="0" width="0" x="147" y="35"/>      
+      </attribute>      
+      <multiplicity id="64" minimum="0" maximum="1">        
+        <position height="0" width="0" x="147" y="35"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="65">    
+    <bendpoint x="1035" y="518"/>    
+    <bendpoint x="1035" y="1179"/>    
+    <bendpoint x="1035" y="1462"/>    
+    <bendpoint x="1035" y="1907"/>    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <association id="66">    
+    <bendpoint x="706" y="1179"/>    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="63" name="LogIn"/>      
-      <multiplicity id="64" minimum="0" maximum="1"/>    
+      <attribute id="67" name="LogIn">        
+        <position height="0" width="0" x="328" y="-657"/>      
+      </attribute>      
+      <multiplicity id="68" minimum="0" maximum="1">        
+        <position height="0" width="0" x="328" y="-657"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="65">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="66" name="modelo"/>      
-      <multiplicity id="67" minimum="0" maximum="1"/>    
+  <dependency id="69">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <dependency id="70">    
+    <bendpoint x="951" y="518"/>    
+    <bendpoint x="993" y="1179"/>    
+    <bendpoint x="993" y="1462"/>    
+    <bendpoint x="993" y="1907"/>    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="8"/>  
+  </dependency>  
+  <association id="71">    
+    <bendpoint x="643" y="1179"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="72" name="Registro">        
+        <position height="0" width="0" x="-159" y="-623"/>      
+      </attribute>      
+      <multiplicity id="73" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-159" y="-623"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
