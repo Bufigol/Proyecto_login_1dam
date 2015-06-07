@@ -12,8 +12,10 @@ import javax.swing.table.DefaultTableModel;
  * javadoc es para mostrar la conexion al repositorio remoto desde el entorno de
  * desarrollo Eclipse.
  * 
- * @author FelipeAndrés
- *
+ * 
+ * @author FelipeAndrÃ©s
+ * @author Jose Manuel Calvo
+ * @author Ivan Sanchez
  */
 public class Modelo implements Int_Modelo {
 	private Vis_Bienvenida bienvenida;
@@ -72,13 +74,13 @@ public class Modelo implements Int_Modelo {
 					Class.forName("oracle.jdbc.driver.OracleDriver");
 					this.conexion_BD = DriverManager.getConnection(URL,
 							Usuario_BD, password_BD);
-					System.out.println(" - Conexión con ORACLE ABIERTA -");
+					System.out.println(" - ConexiÃ³n con ORACLE ABIERTA -");
 				} else
 					System.err.println("Fichero no encontrado");
 			} else
 				System.err.println("Fichero no encontrado");
 		} catch (Exception e) {
-			System.out.println(" – Error de Conexión con ORACLE-");
+			System.out.println(" â€“ Error de ConexiÃ³n con ORACLE-");
 			e.printStackTrace();
 		}
 	}
@@ -234,9 +236,9 @@ public class Modelo implements Int_Modelo {
 	}
 
 	public boolean comprobar_password_registro() {
-		String contraseña = this.registro.getTxF_Pass();
+		String contraseÃ±a = this.registro.getTxF_Pass();
 		String repetir = this.registro.getTxF_RepPass();
-		if (contraseña.equals(repetir)) {
+		if (contraseÃ±a.equals(repetir)) {
 			return true;
 		} else {
 			return false;
@@ -244,7 +246,7 @@ public class Modelo implements Int_Modelo {
 	}
 
 	/**
-	 * Metodo utilizado para comprobar que el nombre y la contraseña ingresada
+	 * Metodo utilizado para comprobar que el nombre y la contraseÃ±a ingresada
 	 * en Vis_LogIn son iguales
 	 */
 	public boolean comprobar_Pasword_login() {
@@ -545,16 +547,16 @@ public class Modelo implements Int_Modelo {
 	public void Cerrarconexion() {
 		try {
 			conexion_BD.close();
-			System.out.println(" - Conexión con ORACLE CERRADA -");
+			System.out.println(" - ConexiÃ³n con ORACLE CERRADA -");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			System.out.println(" – Error de al Cerrar la Conexión con ORACLE-");
+			System.out.println(" â€“ Error de al Cerrar la ConexiÃ³n con ORACLE-");
 		}
 	}
 
 	public void agregar_datos_usuaionuevo_local(String Usuario,
-			String Contraseña) {
-		this.listaUsuarios.put(Usuario, Contraseña);
+			String ContraseÃ±a) {
+		this.listaUsuarios.put(Usuario, ContraseÃ±a);
 	}
 }
