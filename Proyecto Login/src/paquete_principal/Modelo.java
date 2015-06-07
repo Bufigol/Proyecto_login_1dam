@@ -7,11 +7,7 @@ import java.util.*;
 import javax.swing.table.DefaultTableModel;
 
 /**
- * Este proyecto tiene conexion a un repositorio alojado en GitHub. El enlace al
- * repositorio es https://github.com/Bufigol/Proyecto_login_1dam.git Este
- * javadoc es para mostrar la conexion al repositorio remoto desde el entorno de
- * desarrollo Eclipse.
- * 
+ * Esto es una prueba de conexion.
  * 
  * @author FelipeAndrés
  * @author Jose Manuel Calvo
