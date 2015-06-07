@@ -8,6 +8,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  * Esto es una prueba de conexion.
+ * Esta es una prueba de conexion desde Github.
  * 
  * @author FelipeAndrés
  * @author Jose Manuel Calvo
