@@ -6,6 +6,13 @@ import java.util.*;
 
 import javax.swing.table.DefaultTableModel;
 
+/**
+ * Este proyecto tiene conexion a un repositorio alojado en GitHub. El enlace al
+ * repositorio es https://github.com/Bufigol/Proyecto_login_1dam.git
+ * 
+ * @author FelipeAndrés
+ *
+ */
 public class Modelo implements Int_Modelo {
 	private Vis_Bienvenida bienvenida;
 	private Vis_Login login;
@@ -35,13 +42,13 @@ public class Modelo implements Int_Modelo {
 	 */
 	public Modelo(Vis_Bienvenida bienvenida, Vis_Login login,
 			Vis_Registro registro) {
-		//conexion con la base de datos
+		// conexion con la base de datos
 		conexion_BD();
-		//relacion entre objetos
+		// relacion entre objetos
 		this.bienvenida = bienvenida;
 		this.login = login;
 		this.registro = registro;
-		//Impotacion de datos
+		// Impotacion de datos
 		this.listaUsuarios = new HashMap<String, String>();
 		importar_usuarios_y_passwords();
 		agregar_datos_tabla();
